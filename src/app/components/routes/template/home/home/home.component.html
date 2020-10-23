@@ -1,4 +1,40 @@
-<!-- <app-cards></app-cards> -->
-<div *ngFor="let arbol of arboles">
-    <app-arbol [arbol]= "arbol"></app-arbol>
+<div class="home-container">
+
+  <div class="card-columns">
+
+    <a type="" href="#/">
+      <div class="card b mb-3">
+        <div class="card-header">
+          <h3 class="mt-3 text-center text-green">AGREGAR <br> ARBÓL</h3>
+        </div>
+        <div class="card-body">
+          ...
+        </div>
+
+      </div>
+    </a>
+
+    <!-- Este pedazo de codigo es el la iteracion que me muestra todos los arboles que traigo de la API -->
+    <!-- arbol es el componente que tenes que meterle el css de la card-->
+    <div *ngFor="let arbol of arboles">
+      <app-arbol [arbol]= "arbol"></app-arbol>
+    </div>
+
+    <app-cards></app-cards>
+
+
+
+
+    <a type="remove" href="#/">
+      <div class="card b mb-3">
+        <div class="card-header">
+          <h3 class="mt-3 text-danger text-center">QUITAR <br> ARBÓL.</h3>
+        </div>
+        <div class="card-body">
+          ...
+        </div>
+      </div>
+    </a>
+
+  </div>
 </div>
