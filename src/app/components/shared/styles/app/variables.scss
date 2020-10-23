@@ -21,8 +21,11 @@ $warning:               #FF9800;
 $danger:                #F44336;
 $dark:                  #607D8B;
 
+//  #C3F8B4;
+
+
 // Custom color variants
-$amountOfLight: 10%;
+$amountOfLight: 25%;
 
 $primary-light:         lighten($primary, $amountOfLight);
 $success-light:         lighten($success, $amountOfLight);
