@@ -1,0 +1,30 @@
+@import "../../../../shared/styles/bootstrap/functions";
+@import "../../../../shared/styles/bootstrap/variables";
+@import "../../../../shared/styles/bootstrap/mixins";
+@import '../../../../shared/styles/app/variables';
+
+// Import module styling
+@import "../../../../../../../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css";
+
+/* Fix header text placement */
+.bs-datepicker-head > bs-datepicker-navigation-view {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Custom Theme */
+.theme-angle {
+    .bs-datepicker-head {
+        background-color: $info;
+    }
+    .bs-datepicker-body table td {
+        span.selected, &.selected span,
+        span[class*="select-"]:after,
+        &[class*="select-"] span:after {
+            background-color: $info;
+        }
+        &.week span {
+          color: $info;
+        }
+    }
+}
