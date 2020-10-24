@@ -4,12 +4,15 @@ import { TranslatorService } from '../../services/core/translator/translator.ser
 import { MenuService } from '../../services/core/menu/menu.service';
 import { SharedModule } from '../shared/shared.module';
 import { PagesModule } from './template/pages/pages.module';
+import { NuevoarbolModule } from './template/nuevoarbol/nuevoarbol.module';
+
 
 import { menu } from './menu';
 import { routes } from './routes';
 
 @NgModule({
     imports: [
+        NuevoarbolModule,
         SharedModule,
         RouterModule.forRoot(routes),
         PagesModule

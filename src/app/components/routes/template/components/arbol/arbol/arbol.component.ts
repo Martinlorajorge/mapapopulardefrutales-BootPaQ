@@ -7,8 +7,8 @@ import { Arbol } from 'src/app/interfaces/arbol';
   styleUrls: ['./arbol.component.scss']
 })
 export class ArbolComponent implements OnInit {
-  @Input() arbol:Arbol;
-  
+  @Input() arbol: Arbol;
+
   constructor() { }
 
   ngOnInit(): void {

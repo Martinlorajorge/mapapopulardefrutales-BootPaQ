@@ -24,6 +24,7 @@ const routes: Routes = [
         VectorComponent
     ],
     exports: [
+        GoogleComponent,
         RouterModule
     ]
 })

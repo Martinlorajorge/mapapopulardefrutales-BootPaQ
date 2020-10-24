@@ -31,9 +31,9 @@ const Widgets = {
     icon: 'icon-grid'
 };
 
-const Widgets1 = {
-    text: 'Widgets1',
-    link: '/widgets1',
+const Nuevoarbol = {
+    text: 'Nuevo Arbol',
+    link: '/nuevoarbol',
     icon: 'icon-grid'
 };
 

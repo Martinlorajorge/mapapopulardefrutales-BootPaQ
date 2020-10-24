@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this.arbolesService.findAll()
     .subscribe((response: Array<Arbol>) => {
-      this.arboles=response;
+      this.arboles = response;
     });
     }
 
