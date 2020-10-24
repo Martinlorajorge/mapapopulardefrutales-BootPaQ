@@ -31,6 +31,18 @@ const Widgets = {
     icon: 'icon-grid'
 };
 
+const Widgets1 = {
+    text: 'Widgets1',
+    link: '/widgets1',
+    icon: 'icon-grid'
+};
+
+const Widgets2 = {
+    text: 'Widgets2',
+    link: '/widgets2',
+    icon: 'icon-grid'
+};
+
 const Material = {
     text: "Material",
     link: "/material",

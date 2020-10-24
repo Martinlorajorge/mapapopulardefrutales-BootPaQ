@@ -14,7 +14,7 @@ import { routes } from './routes';
         RouterModule.forRoot(routes),
         PagesModule
     ],
-    declarations: [],
+    declarations: [ ],
     exports: [
         RouterModule
     ]
