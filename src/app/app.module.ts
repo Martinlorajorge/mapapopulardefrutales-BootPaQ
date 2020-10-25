@@ -12,6 +12,7 @@ import { CoreModule } from './components/core/core.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { SharedModule } from './components/shared/shared.module';
 import { RoutesModule } from './components/routes/routes.module';
+import { SolicitudedonacionesComponent } from './components/template/solucituddedonaciones/solicitudedonaciones/solicitudedonaciones.component';
 
 // https://github.com/ocombe/ng2-translate/issues/218
 export function createTranslateLoader(http: HttpClient) {
@@ -20,7 +21,8 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        SolicitudedonacionesComponent
     ],
     imports: [
         HttpClientModule,

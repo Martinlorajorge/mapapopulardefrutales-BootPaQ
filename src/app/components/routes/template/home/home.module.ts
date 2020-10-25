@@ -22,7 +22,9 @@ const routes: Routes = [
         CommonModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [HomeComponent],
+    declarations: [
+        HomeComponent
+    ],
     exports: [
         RouterModule
     ]
