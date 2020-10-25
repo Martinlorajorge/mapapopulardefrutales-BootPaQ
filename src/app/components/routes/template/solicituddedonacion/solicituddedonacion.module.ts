@@ -4,6 +4,7 @@ import { SolicituddedonacionComponent } from './solicituddedonacion/solicitudded
 import { Routes, RouterModule } from '@angular/router';
 
 
+
 const routes: Routes = [
   { path: 'solicitud', component: SolicituddedonacionComponent },
 ];
