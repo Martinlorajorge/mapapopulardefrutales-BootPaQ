@@ -1,26 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SolicituddedonacionComponent } from './solicituddedonacion/solicituddedonacion.component';
+import { DetallededonacionComponent } from './detallededonacion/detallededonacion.component';
 import { Routes, RouterModule } from '@angular/router';
 
 
-
 const routes: Routes = [
-  { path: 'solicitud', component: SolicituddedonacionComponent },
+  { path: 'detalle', component: DetallededonacionComponent },
 ];
 
 @NgModule({
   declarations: [
-    SolicituddedonacionComponent
+    DetallededonacionComponent
   ],
   imports: [
     RouterModule.forChild(routes),
     CommonModule
   ],
   exports: [
-    SolicituddedonacionComponent,
-    RouterModule
- ]
-
+    DetallededonacionComponent
+]
 })
-export class SolicituddedonacionModule { }
+export class DetallededonacionModule { }

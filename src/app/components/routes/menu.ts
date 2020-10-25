@@ -1,6 +1,6 @@
 
 const Home = {
-    text: 'Home',
+    text: 'Mis Arboles',
     link: '/home',
     icon: 'icon-home'
 };
@@ -37,9 +37,9 @@ const Nuevoarbol = {
     icon: 'icon-grid'
 };
 
-const Widgets2 = {
-    text: 'Widgets2',
-    link: '/widgets2',
+const SolicituddedonacionModule = {
+    text: 'Solicitud de Donacion',
+    link: '/solicitud',
     icon: 'icon-grid'
 };
 
@@ -448,6 +448,7 @@ const headingMore = {
 export const menu = [
     headingMain,
     Home,
+    SolicituddedonacionModule,
     Dashboard,
     Widgets,
     headingComponents,
