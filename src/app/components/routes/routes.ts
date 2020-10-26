@@ -9,6 +9,7 @@ import { MaintenanceComponent } from './template/pages/maintenance/maintenance.c
 import { Error404Component } from './template/pages/error404/error404.component';
 import { Error500Component } from './template/pages/error500/error500.component';
 
+
 export const routes: Routes = [
 
     {
@@ -27,7 +28,7 @@ export const routes: Routes = [
             { path: 'maps', loadChildren: () => import('./template/maps/maps.module').then(m => m.MapsModule) },
             { path: 'blog', loadChildren: () => import('./template/blog/blog.module').then(m => m.BlogModule) },
             { path: 'ecommerce', loadChildren: () => import('./template/ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
-            { path: 'extras', loadChildren: () => import('./template/extras/extras.module').then(m => m.ExtrasModule) }
+            { path: 'extras', loadChildren: () => import('./template/extras/extras.module').then(m => m.ExtrasModule) },
         ]
     },
 

@@ -1,0 +1,73 @@
+<div class="container-home">
+
+  <div class="nuevoa text-center w-100 pt-2 pb-2">
+    <h1 class="text-light">
+      Nuevo Árbol
+    </h1>
+  </div>
+
+
+
+  <div class="container mt-4">
+    <div class="col">
+
+      <!-- selecciona la fruta desde aqui -->
+      <form action="">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control" id="exampleFormControlSelect1" required>
+            <option selected>Seleccione un Arbol...</option>
+            <option>Manzano</option>
+            <option>Naranjo</option>
+            <option>Ciruelo</option>
+            <option>Frutilla</option>
+            <option>Damasco</option>
+            <option>Mandarina</option>
+            <option>Limon</option>
+            <option>Palta (Aguacate)</option>
+            <option>Higuera</option>
+            <option>Peral</option>
+            <option>Granada</option>
+            <option>Nogal</option>
+            <option>Toronja</option>
+            <option>Pomelo</option>
+            <option>Parral</option>
+            <option>Menbrillo</option>
+          </select>
+        </div>
+      </form>
+
+      <!-- coloca la direccion aqui -->
+      <div class="form-group">
+        <label for="inputAddress"></label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Ubicación o Dirección" required
+          maxlength="100" minlength="1">
+      </div>
+
+    </div>
+
+
+    <div class="col">
+      <!-- utilice de la carpeta maps el mapa que mejor me parecio los demas los comente -->
+      <app-google class="w-100"></app-google>
+
+    </div>
+
+
+
+    <div class="col">
+
+      <!-- aqui selecciona un archivo img para subirlo -->
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFileLangHTML">
+        <label class="custom-file-label" for="customFileLangHTML" data-browse="Subir">Sube una imagen de tu
+          Árbol...</label>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-3 mb-5">
+      <button class="btn btn-outline-success btn-sx" type="button">Confirmar</button>
+    </div>
+
+  </div>
