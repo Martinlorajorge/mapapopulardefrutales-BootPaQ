@@ -31,10 +31,10 @@ const Widgets = {
     icon: 'icon-grid'
 };
 
-const Nuevoarbol = {
-    text: 'Nuevo Arbol',
-    link: '/nuevoarbol',
-    icon: 'icon-grid'
+const MissolicitudesModule = {
+    text: 'Mis Solicitudes',
+    link: '/misolicitud',
+    icon: 'icon-note'
 };
 
 const SolicituddedonacionModule = {
@@ -448,6 +448,7 @@ const headingMore = {
 export const menu = [
     headingMain,
     Home,
+    MissolicitudesModule,
     SolicituddedonacionModule,
     Dashboard,
     Widgets,

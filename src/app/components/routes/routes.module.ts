@@ -6,6 +6,8 @@ import { SharedModule } from '../shared/shared.module';
 import { PagesModule } from './template/pages/pages.module';
 import { NuevoarbolModule } from './template/nuevoarbol/nuevoarbol.module';
 import { SolicituddedonacionModule } from './template/solicituddedonacion/solicituddedonacion.module';
+import { MissolicitudesModule } from './template/missolicitudes/missolicitudes.module';
+
 
 
 import { menu } from './menu';
@@ -13,6 +15,7 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
+        MissolicitudesModule,
         SolicituddedonacionModule,
         NuevoarbolModule,
         SharedModule,
