@@ -7,6 +7,7 @@ import { PagesModule } from './template/pages/pages.module';
 import { NuevoarbolModule } from './template/nuevoarbol/nuevoarbol.module';
 import { SolicituddedonacionModule } from './template/solicituddedonacion/solicituddedonacion.module';
 import { MissolicitudesModule } from './template/missolicitudes/missolicitudes.module';
+import { SolicitudconfirmadaModule } from './template/solicitudconfirmada/solicitudconfirmada.module';
 
 
 
@@ -15,6 +16,7 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
+        SolicitudconfirmadaModule,
         MissolicitudesModule,
         SolicituddedonacionModule,
         NuevoarbolModule,
