@@ -1,6 +1,6 @@
-<div class="container-home">
+<div class="container-home animated fast fadeIn">
 
-  <div class="nuevoa text-center w-100 pt-2 pb-2">
+  <div class="nuevoa animated fast text-center w-100 pt-2 pb-2">
     <h1 class="text-light">
       Mis Solicitudes
     </h1>
@@ -12,14 +12,14 @@
   <div *ngFor="let solicitud of solicitudesConfirmadas">
     <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
   </div>
-  
+
 
 
 
   <h3 class="text-center mt-3">Solicitudes de Organizaciones</h3>
 
 
-  <div *ngFor="let solicitud of solicitudesDeOrganizaciones">
+  <div class="animated fast" *ngFor="let solicitud of solicitudesDeOrganizaciones">
     <app-cardsolicitud-de-organizacion [solicitud]="solicitud"></app-cardsolicitud-de-organizacion>
   </div>
 
@@ -28,7 +28,7 @@
   <h3 class="text-center mt-3">Pendiente de confirmación del recolector</h3>
 
 
-  <div *ngFor="let solicitud of solicitudesPendientes">
+  <div class="animated fast" *ngFor="let solicitud of solicitudesPendientes">
     <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
   </div>
 

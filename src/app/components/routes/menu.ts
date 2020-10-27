@@ -39,7 +39,7 @@ const MissolicitudesModule = {
 
 const CuidadodearbolesModule = {
     text: 'Cuidados de Árboles',
-    link: '/cuidado',
+    link: '/cuidados',
     icon: 'fa fa-shield-alt'
 };
 
