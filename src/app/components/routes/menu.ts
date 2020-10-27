@@ -443,7 +443,7 @@ const PerfilorganizacionModule = {
 
 
 const headingMain = {
-    text: 'Main Navigation',
+    text: 'Menu de Navegación',
     heading: true
 };
 
