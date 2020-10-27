@@ -9,23 +9,28 @@
 
   <h3 class="text-center mt-3">Confirmadas</h3>
 
-
-  <app-cardsolicitud></app-cardsolicitud>
+  <div *ngFor="let solicitud of solicitudesConfirmadas">
+    <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
+  </div>
+  
 
 
 
   <h3 class="text-center mt-3">Solicitudes de Organizaciones</h3>
 
 
-  <app-cardsolicitud></app-cardsolicitud>
+  <div *ngFor="let solicitud of solicitudesDeOrganizaciones">
+    <app-cardsolicitud-de-organizacion [solicitud]="solicitud"></app-cardsolicitud-de-organizacion>
+  </div>
 
 
 
   <h3 class="text-center mt-3">Pendiente de confirmación del recolector</h3>
 
 
-
-  <app-cardsolicitud></app-cardsolicitud>
+  <div *ngFor="let solicitud of solicitudesPendientes">
+    <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
+  </div>
 
 
 

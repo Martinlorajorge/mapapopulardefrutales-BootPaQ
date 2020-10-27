@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CardsolicitudModule } from '../components/cardsolicitud/cardsolicitud.module';
+import { CardsolicitudDeOrganizacionModule } from '../components/cardsolicitud-de-organizacion/cardsolicitud-de-organizacion.module';
 
 import { MissolicitudesComponent } from './missolicitudes/missolicitudes.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   ],
   imports: [
     CardsolicitudModule,
+    CardsolicitudDeOrganizacionModule,
     RouterModule.forChild(routes),
     CommonModule
   ],

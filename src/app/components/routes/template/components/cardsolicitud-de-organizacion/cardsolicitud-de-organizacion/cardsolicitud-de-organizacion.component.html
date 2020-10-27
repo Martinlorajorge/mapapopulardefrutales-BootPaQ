@@ -1,0 +1,11 @@
+<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;">
+    <div class="card-header">{{solicitud.organizacion}}</div>
+    <div class="card-body text-success">
+      <p class="card-text">A {{solicitud.organizacion}} le interesa retirar los frutos de sobra de tu: </p>
+      <ul *ngFor="let arbol of solicitud.arboles">
+        <li class="card-text">{{arbol.nombre}}</li>
+      </ul>
+      
+    </div>
+    <a href="#/" class="text-right">Ver mas...</a>
+  </div>
