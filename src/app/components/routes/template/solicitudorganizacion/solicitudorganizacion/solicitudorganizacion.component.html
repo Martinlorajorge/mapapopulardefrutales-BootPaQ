@@ -1,1 +1,43 @@
-<p>solicitudorganizacion works!</p>
+<div class="container-home">
+
+  <div class="nuevoa text-center w-100 pt-2 pb-2">
+    <h1 class="text-light">
+      Mis Solicitudes
+    </h1>
+  </div>
+
+  <div class="container">
+    <p class="text-justify mt-3">Árbol:(nombre de arbol)...</p>
+    <p class="text-justify mt-3">Organizacion: (Nombre de la organizacion)</p>
+
+    <hr class="border-green">
+
+
+
+    <app-cardrecolector></app-cardrecolector>
+
+
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-6">
+      <div class="text-center mt-3 mb-3">
+        <a href="#/" class="btn btn-danger btn-xs py-2 px-4">Rechazar</a>
+      </div>
+
+    </div>
+
+
+    <div class="col-6">
+      <div class="text-center mt-3 mb-3">
+        <a [routerLink]="['/solicitud']" routerLinkActive="router-link-active"
+          class="btn btn-success btn-xs py-2 px-4">Confirmar</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
