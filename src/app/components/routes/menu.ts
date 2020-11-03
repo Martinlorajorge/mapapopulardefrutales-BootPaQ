@@ -452,6 +452,14 @@ const headingComponents = {
     heading: true
 };
 
+
+const HomeorganizacionModule = {
+    text: 'Home Organizacion',
+    link: '/homeorganizacion',
+    icon: 'icon-home'
+};
+
+
 // const headingComponents = {
 //     text: 'Components',
 //     heading: true
@@ -472,6 +480,7 @@ export const menu = [
     // Dashboard,
     // Widgets,
     headingComponents,
+    HomeorganizacionModule,
     // Material,
     // Elements,
     // Forms,

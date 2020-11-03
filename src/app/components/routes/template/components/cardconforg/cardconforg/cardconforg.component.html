@@ -1,0 +1,25 @@
+<!-- esta Card se va a repetir varias veces en Home Organizacion (pantalla) -->
+
+<!-- confirmadas y Pendientes son iguales, esta bien este componente, solicitud de organizacion se muestra distinto,-->
+<!-- asi que es un componente aparte, movi su css a cardsolicitud de organizacion -->
+
+<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;">
+
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="../../../../../../assets/img/bg9.jpg" class="card-img" alt="...">
+    </div>
+    <div class="col-8">
+
+      <div class="card-body text-success">
+        <ul>
+          <li class="card-title">(Nombre del arbol)</li>
+        </ul>
+        <br>
+        <p class="card-text">Familia:....</p>
+
+      </div>
+      <a [routerLink]="['/#']" routerLinkActive="router-link-active" class="text-right mx-3">Ver mas...</a>
+    </div>
+  </div>
+</div>
