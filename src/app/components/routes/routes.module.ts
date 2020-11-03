@@ -11,6 +11,9 @@ import { SolicitudconfirmadaModule } from './template/solicitudconfirmada/solici
 import { CuidadodearbolesModule } from './template/cuidadodearboles/cuidadodearboles.module';
 import { PerfilorganizacionModule } from './template/perfilorganizacion/perfilorganizacion.module';
 
+// importarcion del lado de la organizacion
+
+
 
 
 
