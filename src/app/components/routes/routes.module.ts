@@ -11,6 +11,10 @@ import { SolicitudconfirmadaModule } from './template/solicitudconfirmada/solici
 import { CuidadodearbolesModule } from './template/cuidadodearboles/cuidadodearboles.module';
 import { PerfilorganizacionModule } from './template/perfilorganizacion/perfilorganizacion.module';
 
+// importarcion del lado de la organizacion
+import { HomeorganizacionModule } from './template/homeorganizacion/homeorganizacion.module';
+
+
 
 
 
@@ -19,6 +23,7 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
+        HomeorganizacionModule,
         PerfilorganizacionModule,
         CuidadodearbolesModule,
         SolicitudconfirmadaModule,

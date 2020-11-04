@@ -447,6 +447,19 @@ const headingMain = {
     heading: true
 };
 
+const headingComponents = {
+    text: 'Menu de Organización',
+    heading: true
+};
+
+
+const HomeorganizacionModule = {
+    text: 'Home Organizacion',
+    link: '/homeorganizacion',
+    icon: 'icon-home'
+};
+
+
 // const headingComponents = {
 //     text: 'Components',
 //     heading: true
@@ -466,7 +479,8 @@ export const menu = [
     // SolicituddedonacionModule,
     // Dashboard,
     // Widgets,
-    // headingComponents,
+    headingComponents,
+    HomeorganizacionModule,
     // Material,
     // Elements,
     // Forms,
