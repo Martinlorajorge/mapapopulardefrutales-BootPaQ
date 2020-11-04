@@ -1,3 +1,4 @@
+import { ConfirmadaorganizacionModule } from './template/confirmadaorganizacion/confirmadaorganizacion.module';
 
 const Home = {
     text: 'Mis Arboles',
