@@ -1,4 +1,4 @@
-<div class="container-home class=" animated fast fadeIn"">
+<!-- <div class="container-home class=" animated fast fadeIn""> -->
 
   <div class="nuevoa text-center w-100 pt-2 pb-2">
     <h1 class="text-light">
@@ -15,7 +15,7 @@
       <form action="" class="animated fast">
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control" id="exampleFormControlSelect1" required>
+          <select class="form-control" id="exampleFormControlSelect1" required [(ngModel)]="arbol.nombre" name="nombre">
             <option selected>Seleccione un Arbol...</option>
             <option>Manzano</option>
             <option>Naranjo</option>
@@ -41,7 +41,7 @@
       <div class="form-group">
         <label for="inputAddress"></label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Ubicación o Dirección" required
-          maxlength="100" minlength="1">
+          maxlength="100" minlength="1" [(ngModel)]="arbol.direccion">
       </div>
 
     </div>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="text-center mt-3 mb-5">
-      <button class="btn btn-outline-success btn-sx" type="button">Confirmar</button>
+      <button class="btn btn-outline-success btn-sx" type="button" (click)="guardarArbol()">Confirmar</button>
     </div>
 
   </div>

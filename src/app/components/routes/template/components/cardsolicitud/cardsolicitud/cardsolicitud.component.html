@@ -13,5 +13,5 @@
     <p class="card-text">Fecha y horario de retiro: {{solicitud.fecha}},{{solicitud.hora}} </p>
 
   </div>
-  <a [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a>
+  <a *ngIf="solicitud.tipo!='pendientes'" [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a>
 </div>

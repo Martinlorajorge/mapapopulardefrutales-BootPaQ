@@ -7,19 +7,20 @@
   </div>
   <!-- En esta cards tendria que hacer que se vea la cards selecionada y pase los parametros a esta que esta de un modo orizontal segun la pantalla -->
   <div class="card mb-3 mt-3 ml-auto mr-auto animated fast" style="max-width: 90%;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="../../../../../../assets/img/mangues.jpg" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h2 class="card-title">Nombre de la fruta</h2>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Direccion</small></p>
+    <ng-container *ngIf="arbol">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{arbol.imagen}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">{{arbol.nombre}}</h2>
+            <p class="card-text">{{arbol.direccion}}</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 
 

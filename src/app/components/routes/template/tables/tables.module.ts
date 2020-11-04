@@ -10,7 +10,7 @@ import { AngulargridComponent } from './angulargrid/angulargrid.component';
 import { NgxdatatableComponent } from './ngxdatatable/ngxdatatable.component';
 
 const routes: Routes = [
-    { path: 'standard', component: StandardComponent },
+    { path: 'standard/:id', component: StandardComponent },
     { path: 'extended', component: ExtendedComponent },
     { path: 'aggrid', component: AngulargridComponent },
     { path: 'ngxdatatable', component: NgxdatatableComponent }

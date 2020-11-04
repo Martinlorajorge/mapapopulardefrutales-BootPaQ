@@ -7,7 +7,7 @@ import { DetallededonacionModule } from '../components/detallededonacion/detalle
 
 
 const routes: Routes = [
-  { path: 'solicitud', component: SolicituddedonacionComponent },
+  { path: 'solicitud/:id', component: SolicituddedonacionComponent },
   { path: 'detalle', component: DetallededonacionModule },
 ];
 
