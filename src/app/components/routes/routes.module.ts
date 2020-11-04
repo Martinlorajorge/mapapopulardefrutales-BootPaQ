@@ -12,7 +12,12 @@ import { CuidadodearbolesModule } from './template/cuidadodearboles/cuidadodearb
 import { PerfilorganizacionModule } from './template/perfilorganizacion/perfilorganizacion.module';
 
 // importarcion del lado de la organizacion
+
 import { HomeorganizacionModule } from './template/homeorganizacion/homeorganizacion.module';
+
+import { SolicitudrecoleccionModule } from './template/solicitudrecoleccion/solicitudrecoleccion.module';
+
+import { MapaarbolesModule } from './template/mapaarboles/mapaarboles.module';
 
 
 
@@ -24,6 +29,8 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
+        MapaarbolesModule,
+        SolicitudrecoleccionModule,
         HomeorganizacionModule,
         PerfilorganizacionModule,
         CuidadodearbolesModule,

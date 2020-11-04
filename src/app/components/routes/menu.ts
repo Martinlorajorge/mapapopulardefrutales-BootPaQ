@@ -1,5 +1,3 @@
-import { ConfirmadaorganizacionModule } from './template/confirmadaorganizacion/confirmadaorganizacion.module';
-
 const Home = {
     text: 'Mis Arboles',
     link: '/home',
@@ -461,6 +459,18 @@ const HomeorganizacionModule = {
 };
 
 
+const SolicitudrecoleccionModule = {
+    text: 'solicitud recoleccion',
+    link: '/solicitudrecoleccion',
+    icon: 'icon-home'
+};
+
+const MapaarbolesModule = {
+    text: 'Mapa',
+    link: '/mapaarboles',
+    icon: 'icon-map'
+};
+
 // const headingComponents = {
 //     text: 'Components',
 //     heading: true
@@ -482,6 +492,8 @@ export const menu = [
     // Widgets,
     headingComponents,
     HomeorganizacionModule,
+    SolicitudrecoleccionModule,
+    MapaarbolesModule,
     // Material,
     // Elements,
     // Forms,
