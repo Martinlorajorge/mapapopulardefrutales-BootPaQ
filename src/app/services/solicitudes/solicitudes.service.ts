@@ -19,4 +19,17 @@ public findAlldeOrganizaciones(): Observable<any>{
 public findAllPendientes(): Observable<any>{
   return this.http.get(this.apiBaseUrl+'/solicitudesPendientes');
 }
+
+//solicitudes de organizacion
+public findAllorgConfirmadas(): Observable<any>{
+  return this.http.get(this.apiBaseUrl+'/orgSolicitudesConfirmadas');
 }
+public findAllorgdeFamilias(): Observable<any>{
+  return this.http.get(this.apiBaseUrl+'/orgSolicitudesDeFamilias');
+}
+public findAllorgPendientes(): Observable<any>{
+  return this.http.get(this.apiBaseUrl+'/orgSolicitudesPendientes');
+}
+
+}
+

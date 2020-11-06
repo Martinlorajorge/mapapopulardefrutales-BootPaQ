@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Solicitud } from 'src/app/interfaces/solicitud';
+import { SolicitudesService } from 'src/app/services/solicitudes/solicitudes.service';
 
 @Component({
   selector: 'app-homeorganizacion',
@@ -6,10 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homeorganizacion.component.scss']
 })
 export class HomeorganizacionComponent implements OnInit {
+  public solicitudesConfirmadas: Array<Solicitud>;
+  public solicitudesDeFamilias: Array<Solicitud>;
+  public solicitudesPendientes: Array<Solicitud>;
+  constructor(private solicitudesService: SolicitudesService) { }
 
-  constructor() { }
+  ngOnInit() {
+      this.solicitudesService.findAllorgConfirmadas()
+  .subscribe((response: Array<Solicitud>) => {
+    this.solicitudesConfirmadas = response;
+  });
+  this.solicitudesService.findAllorgdeFamilias()
+  .subscribe((response: Array<Solicitud>) => {
+    this.solicitudesDeFamilias = response;
+  });
+  this.solicitudesService.findAllorgPendientes()
+  .subscribe((response: Array<Solicitud>) => {
+    this.solicitudesPendientes = response;
+  });
 
-  ngOnInit(): void {
   }
 
 }
