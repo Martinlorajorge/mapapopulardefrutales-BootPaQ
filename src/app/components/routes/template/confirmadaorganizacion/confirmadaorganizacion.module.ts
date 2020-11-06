@@ -7,7 +7,7 @@ import { DetalleorganizacionModule } from '../components/detalleorganizacion/det
 
 const routes: Routes = [
 
-  { path: 'confirmada', component: ConfirmadaorganizacionComponent },
+  { path: 'solicitudconfirmada', component: ConfirmadaorganizacionComponent },
   { path: 'detalleorg', component: DetalleorganizacionModule },
 
 
@@ -19,13 +19,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ConfirmadaorganizacionComponent,
-    DetalleorganizacionModule
+    ConfirmadaorganizacionComponent
   ],
   imports: [
     RouterModule.forChild(routes),
-    DetalleorganizacionModule,
-    CommonModule
+    CommonModule,
+    DetalleorganizacionModule
   ],
   exports: [
     RouterModule,

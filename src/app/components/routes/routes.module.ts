@@ -14,10 +14,9 @@ import { PerfilorganizacionModule } from './template/perfilorganizacion/perfilor
 // importarcion del lado de la organizacion
 
 import { HomeorganizacionModule } from './template/homeorganizacion/homeorganizacion.module';
-
 import { SolicitudrecoleccionModule } from './template/solicitudrecoleccion/solicitudrecoleccion.module';
-
 import { MapaarbolesModule } from './template/mapaarboles/mapaarboles.module';
+import {ConfirmadaorganizacionModule} from './template/confirmadaorganizacion/confirmadaorganizacion.module';
 
 
 
@@ -36,6 +35,7 @@ import { routes } from './routes';
         CuidadodearbolesModule,
         SolicitudconfirmadaModule,
         MissolicitudesModule,
+        ConfirmadaorganizacionModule,
         SolicituddedonacionModule,
         NuevoarbolModule,
         SharedModule,

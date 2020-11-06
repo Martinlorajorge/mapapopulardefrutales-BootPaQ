@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SolicitudrecoleccionComponent } from './solicitudrecoleccion/solicitudrecoleccion.component';
 import { Routes, RouterModule } from '@angular/router';
-// import { DetalleorganizacionModule } from '../components/detalleorganizacion/detalleorganizacion.module';
+import { DetalleorganizacionModule } from '../components/detalleorganizacion/detalleorganizacion.module';
 
 
 const routes: Routes = [
@@ -20,11 +20,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    // DetalleorganizacionModule,
     SolicitudrecoleccionComponent
   ],
   imports: [
-    // DetalleorganizacionModule,
+    DetalleorganizacionModule,
     RouterModule.forChild(routes),
     CommonModule
   ],
