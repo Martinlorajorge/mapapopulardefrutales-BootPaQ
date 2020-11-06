@@ -1,4 +1,13 @@
+
+
+
 <div class="container-home animated fast">
+
+  
+
+
+
+  
 
   
 
@@ -8,34 +17,43 @@
     </h1>
   </div>
 
-
-  <h3 class="text-center mt-3">Confirmadas</h3>
-
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
-    <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
-  </div>
-
-
-
-
-  <h3 class="text-center mt-3">Solicitudes de Recolección</h3>
-
-
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeFamilias">
-    <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
-  </div>
-
-
-
-  <h3 class="text-center mt-3 animated fast fadeIn">Pendiente de confirmación del recolector</h3>
-
-
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesPendientes">
-    <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
-  </div>
-
-
-
-
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel>
+      <ng-template ngbPanelHeader>
+        <div class="d-flex align-items-center justify-content-between">
+          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Confirmadas</button>
+        </div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
+          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        </div>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel>
+      <ng-template ngbPanelHeader>
+        <div class="d-flex align-items-center justify-content-between">
+          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Solicitudes de Recolección</button>
+        </div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeFamilias">
+          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        </div>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel>
+      <ng-template ngbPanelHeader>
+        <div class="d-flex align-items-center justify-content-between">
+          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Pendientes de confirmación</button>
+        </div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesPendientes">
+          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
 
 </div>

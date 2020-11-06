@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HomeorganizacionComponent } from './homeorganizacion/homeorganizacion.component';
 import { CardsolirecModule } from '../components/cardsolirec/cardsolirec.module';
 import { CardconforgModule } from '../components/cardconforg/cardconforg.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,6 +24,7 @@ const routes: Routes = [
         CardconforgModule,
         MaterialModule,
         CommonModule,
+        NgbModule,
         RouterModule.forChild(routes)
     ],
     declarations: [

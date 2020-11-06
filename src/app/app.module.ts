@@ -12,6 +12,8 @@ import { CoreModule } from './components/core/core.module';
 import { LayoutModule } from './components/layout/layout.module';
 import { SharedModule } from './components/shared/shared.module';
 import { RoutesModule } from './components/routes/routes.module';
+//ng-bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // https://github.com/ocombe/ng2-translate/issues/218
 export function createTranslateLoader(http: HttpClient) {
@@ -35,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
                 useFactory: (createTranslateLoader),
                 deps: [HttpClient]
             }
-        })
+        }),
+        NgbModule
     ],
     providers: [],
     bootstrap: [AppComponent]

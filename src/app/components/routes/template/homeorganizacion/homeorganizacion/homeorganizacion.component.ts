@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { Solicitud } from 'src/app/interfaces/solicitud';
 import { SolicitudesService } from 'src/app/services/solicitudes/solicitudes.service';
+import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-homeorganizacion',
@@ -11,7 +13,9 @@ export class HomeorganizacionComponent implements OnInit {
   public solicitudesConfirmadas: Array<Solicitud>;
   public solicitudesDeFamilias: Array<Solicitud>;
   public solicitudesPendientes: Array<Solicitud>;
-  constructor(private solicitudesService: SolicitudesService) { }
+  constructor(private solicitudesService: SolicitudesService,private acordeonConfig:NgbAccordionConfig) { 
+    acordeonConfig.closeOthers=true;
+  }
 
   ngOnInit() {
       this.solicitudesService.findAllorgConfirmadas()
