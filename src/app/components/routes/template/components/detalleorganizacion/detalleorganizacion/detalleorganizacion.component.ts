@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Solicitud } from 'src/app/interfaces/solicitud';
 
 @Component({
   selector: 'app-detalleorganizacion',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalleorganizacion.component.scss']
 })
 export class DetalleorganizacionComponent implements OnInit {
-
+  @Input() solicitud:Solicitud;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  public tieneRecolector(): boolean{
+    return this.solicitud.tipo=="confirmada" ||this.solicitud.tipo=="pendiente";
   }
 
 }

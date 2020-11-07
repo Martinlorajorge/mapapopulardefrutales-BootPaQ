@@ -7,7 +7,7 @@ import { DetalleorganizacionModule } from '../components/detalleorganizacion/det
 
 const routes: Routes = [
 
-  { path: 'solicitudconfirmada', component: ConfirmadaorganizacionComponent },
+  { path: 'solicitudconfirmada/:id', component: ConfirmadaorganizacionComponent },
   { path: 'detalleorg', component: DetalleorganizacionModule },
 
 

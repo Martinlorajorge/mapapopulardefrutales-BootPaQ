@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Solicitud } from 'src/app/interfaces/solicitud';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,16 @@ public findAllorgdeFamilias(): Observable<any>{
 }
 public findAllorgPendientes(): Observable<any>{
   return this.http.get(this.apiBaseUrl+'/orgSolicitudesPendientes');
+}
+
+//find 1 solicitud
+public findSolicitudaConfirmar(id:number){
+  const url =this.apiBaseUrl+'/solicitudaconfirmar/'+id;
+  return this.http.get<Solicitud>(url);
+}
+public findSolicitudConfirmada(id:number){
+  const url =this.apiBaseUrl+'/solicitudconfirmada/'+id;
+  return this.http.get<Solicitud>(url);
 }
 
 }

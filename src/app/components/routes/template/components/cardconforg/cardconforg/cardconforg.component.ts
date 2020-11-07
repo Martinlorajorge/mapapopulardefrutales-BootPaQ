@@ -15,7 +15,7 @@ export class CardconforgComponent implements OnInit {
   }
   abrirSolicitud(){
     if(this.solicitud.tipo=="deFamilia")
-      this.router.navigate(['/solicitudrecoleccion/']);
-      else this.router.navigate(['/solicitudconfirmada/']);
+      this.router.navigate(['/solicitudrecoleccion/'+this.solicitud.id]);
+      else this.router.navigate(['/solicitudconfirmada/'+this.solicitud.id]);
   }
 }
