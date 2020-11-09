@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapaarbolesComponent } from './mapaarboles/mapaarboles.component';
 import { Routes, RouterModule } from '@angular/router';
-// import { MapsModule } from '../maps/maps.module';
+import { MapsModule } from '../maps/maps.module';
 
 
 
 const routes: Routes = [
 
   { path: 'mapaarboles', component: MapaarbolesComponent },
+  { path: 'google', component: MapsModule },
 
 ];
 
@@ -19,16 +20,17 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MapaarbolesComponent,
-    // MapsModule
   ],
   imports: [
-    // MapsModule,
+    MapsModule,
     RouterModule.forChild(routes),
     CommonModule
   ],
+  // providers: [
+  //   MapsModule,
+  // ],
   exports: [
     MapaarbolesComponent,
-    RouterModule
  ]
 })
 export class MapaarbolesModule { }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { GoogleComponent } from '../../maps/google/google.component';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-mapaarboles',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapaarbolesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public googleComponent: GoogleComponent) { }
+
+  @ViewChild(GoogleComponent) mapaGoogle;
+
+
 
   ngOnInit(): void {
   }

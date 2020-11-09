@@ -12,7 +12,7 @@ import { GoogleComponent } from '../../maps/google/google.component';
 export class NuevoarbolComponent implements OnInit {
   public arbol: Arbol;
   arbolId:string;
-  constructor(private arbolesService:ArbolesService) { 
+  constructor(public arbolesService:ArbolesService) { 
   }
   @ViewChild(GoogleComponent) mapaGoogle;
 
