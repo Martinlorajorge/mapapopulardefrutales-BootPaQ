@@ -1,6 +1,6 @@
-<div class="container-home">
+<div class="container-home animated fast">
 
-  <div class="nuevoa text-center w-100 pt-2 pb-2">
+  <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
     <h1 class="text-light">
       Nuevo Árbol
     </h1>
@@ -8,14 +8,14 @@
 
 
 
-  <div class="container mt-4">
-    <div class="col">
+  <div class="container mt-4 animated fast fadeIn">
+    <div class=" col">
 
       <!-- selecciona la fruta desde aqui -->
       <form action="">
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control" id="exampleFormControlSelect1" required>
+          <select class="form-control" id="exampleFormControlSelect1" required [(ngModel)]="arbol.nombre" name="nombre">
             <option selected>Seleccione un Arbol...</option>
             <option>Manzano</option>
             <option>Naranjo</option>
@@ -38,16 +38,16 @@
       </form>
 
       <!-- coloca la direccion aqui -->
-      <div class="form-group">
+      <div class="form-group animated fast fadeIn">
         <label for="inputAddress"></label>
         <input type="text" class="form-control" id="inputAddress" placeholder="Ubicación o Dirección" required
-          maxlength="100" minlength="1">
+          maxlength="100" minlength="1" [(ngModel)]="arbol.direccion">
       </div>
 
     </div>
 
 
-    <div class="col">
+    <div class="col animated fast fadeIn">
       <!-- utilice de la carpeta maps el mapa que mejor me parecio los demas los comente -->
       <app-google class="w-100"></app-google>
 
@@ -55,7 +55,7 @@
 
 
 
-    <div class="col">
+    <div class="col animated fast fadeIn">
 
       <!-- aqui selecciona un archivo img para subirlo -->
       <div class="custom-file">
@@ -66,8 +66,10 @@
 
     </div>
 
-    <div class="text-center mt-3 mb-5">
-      <button class="btn btn-outline-success btn-sx" type="button">Confirmar</button>
+    <div class="text-center mt-3 mb-5 animated fast fadeIn">
+      <button class="btn btn-outline-success btn-sx" type="button" (click)="guardarArbol()">Confirmar</button>
     </div>
 
   </div>
+
+</div>

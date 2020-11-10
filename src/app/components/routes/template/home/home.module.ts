@@ -27,6 +27,7 @@ const routes: Routes = [
         HomeComponent
     ],
     exports: [
+        HomeComponent,
         RouterModule
     ]
 })

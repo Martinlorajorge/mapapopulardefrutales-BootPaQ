@@ -1,0 +1,21 @@
+<ng-container *ngIf="solicitud">
+  <div class="card border-success mb-3 mr-auto ml-auto " style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{solicitud.imagen}}" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body text-success">
+          <h5 class="card-title">Arbol: {{solicitud.nombre}}</h5>
+          <p class="card-text">Familia: {{solicitud.familia}}</p>
+          <p class="card-text">Cantidad: {{solicitud.cantidad}}</p>
+          <p class="card-text">Retiro: {{solicitud.fecha}}, {{solicitud.hora}}</p>
+          <p *ngIf="tieneRecolector()" class="card-text">Recolector: {{solicitud.recolector}} </p>
+          <p class="card-text">Direccion: {{solicitud.direccion}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+
