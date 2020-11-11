@@ -252,19 +252,19 @@ const PerfilorganizacionModule = {
 //     ]
 // };
 
-// const Pages = {
-//     text: 'Pages',
-//     link: '/pages',
-//     icon: 'icon-doc',
-//     submenu: [
-//         {
-//             text: 'Login',
-//             link: '/login'
-//         },
-//         {
-//             text: 'Register',
-//             link: '/register'
-//         },
+const Pages = {
+     text: 'Login y Registro',
+     link: '/pages',
+     icon: 'icon-doc',
+     submenu: [
+         {
+             text: 'Login',
+             link: '/login'
+         },
+         {
+             text: 'Register',
+             link: '/register'
+         },
 //         {
 //             text: 'Recover',
 //             link: '/recover'
@@ -285,8 +285,8 @@ const PerfilorganizacionModule = {
 //             text: 'Maintenance',
 //             link: '/maintenance'
 //         }
-//     ]
-// };
+     ]
+ };
 
 // const Blog = {
 //     text: 'Blog',
@@ -501,7 +501,7 @@ export const menu = [
     // Tables,
     // Maps,
     // headingMore,
-    // Pages,
+     Pages,
     // Blog,
     // Ecommerce,
     // Extras
