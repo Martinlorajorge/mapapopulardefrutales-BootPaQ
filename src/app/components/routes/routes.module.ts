@@ -18,6 +18,10 @@ import { SolicitudrecoleccionModule } from './template/solicitudrecoleccion/soli
 import { MapaarbolesModule } from './template/mapaarboles/mapaarboles.module';
 import {ConfirmadaorganizacionModule} from './template/confirmadaorganizacion/confirmadaorganizacion.module';
 import { MicuentaorganizacionModule } from './template/micuentaorganizacion/micuentaorganizacion.module';
+import { RecolectoresModule } from './template/recolectores/recolectores.module';
+import { NuevorecolectorModule } from './template/nuevorecolector/nuevorecolector.module';
+import { DetallerecolectorModule } from './template/detallerecolector/detallerecolector.module';
+
 
 
 
@@ -29,6 +33,9 @@ import { routes } from './routes';
 
 @NgModule({
     imports: [
+        DetallerecolectorModule,
+        NuevorecolectorModule,
+        RecolectoresModule,
         MicuentaorganizacionModule,
         MapaarbolesModule,
         SolicitudrecoleccionModule,
