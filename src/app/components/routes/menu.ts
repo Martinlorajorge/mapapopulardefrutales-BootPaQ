@@ -1,3 +1,4 @@
+import { MicuentaorganizacionModule } from './template/micuentaorganizacion/micuentaorganizacion.module';
 const Home = {
     text: 'Mis Arboles',
     link: '/home',
@@ -46,6 +47,13 @@ const PerfilorganizacionModule = {
     text: 'Perfil de Órganizaciones',
     link: '/perfilorganizacion',
     icon: 'icon-chemistry'
+};
+
+
+const MicuentaorganizacionModule = {
+    text: 'Mi Cuenta',
+    link: '/micuenta',
+    icon: 'icon-notebook'
 };
 
 // const SolicituddedonacionModule = {
@@ -494,6 +502,7 @@ export const menu = [
     HomeorganizacionModule,
     SolicitudrecoleccionModule,
     MapaarbolesModule,
+    MicuentaorganizacionModule,
     // Material,
     // Elements,
     // Forms,
