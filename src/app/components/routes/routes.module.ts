@@ -22,6 +22,17 @@ import { RecolectoresModule } from './template/recolectores/recolectores.module'
 import { NuevorecolectorModule } from './template/nuevorecolector/nuevorecolector.module';
 import { DetallerecolectorModule } from './template/detallerecolector/detallerecolector.module';
 
+// admin
+
+import { OrganizacionesModule } from './template/organizaciones/organizaciones.module';
+import { OrganizacionModule } from './template/organizacion/organizacion.module';
+import { FamiliasModule } from './template/familias/familias.module';
+import { FamiliaModule } from './template/familia/familia.module';
+
+
+
+
+
 
 
 
@@ -35,6 +46,10 @@ import { NuevoArbolComponent } from './template/mis-arboles/nuevo-arbol/nuevo-ar
 
 @NgModule({
     imports: [
+        OrganizacionesModule,
+        OrganizacionModule,
+        FamiliasModule,
+        FamiliaModule,
         DetallerecolectorModule,
         NuevorecolectorModule,
         RecolectoresModule,

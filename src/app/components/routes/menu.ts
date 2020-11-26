@@ -488,15 +488,33 @@ const RecolectoresModule = {
     icon: 'icon-user'
 };
 
+
+
+
+const FamiliasModule = {
+    text: 'Familias',
+    link: '/familias',
+    icon: 'icon-user'
+};
+
+const OrganizacionesModule = {
+    text: 'Organizaciones',
+    link: '/organizaciones',
+    icon: 'icon-home'
+};
+
+
+
+
 // const headingComponents = {
 //     text: 'Components',
 //     heading: true
 // };
 
-// const headingMore = {
-//     text: 'More',
-//     heading: true
-// };
+const headingMore = {
+     text: 'Administrador',
+     heading: true
+ };
 
 export const menu = [
     headingMain,
@@ -519,8 +537,10 @@ export const menu = [
     // Charts,
     // Tables,
     // Maps,
-    // headingMore,
-     Pages,
+    Pages,
+    headingMore,
+    FamiliasModule,
+    OrganizacionesModule,
     // Blog,
     // Ecommerce,
     // Extras
