@@ -10,11 +10,11 @@
     <ng-container *ngIf="arbol">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="{{arbol.imagen}}" class="card-img" alt="...">
+          <img src="{{arbol.galeria}}" class="card-img" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h2 class="card-title">{{arbol.nombre}}</h2>
+            <h2 class="card-title">{{arbol.nom_especie}}</h2>
             <p class="card-text">{{arbol.direccion}}</p>
             <p class="card-text"><small class="text-muted"></small></p>
           </div>
@@ -29,27 +29,23 @@
     <!-- seleciona la organizacion -->
     <div class="col-12">
 
-      <select class="custom-select custom-select-lg mb-3">
-        <option selected>Organización</option>
-        <option value="1">AArEII</option>
-        <option value="2">ANEIEM </option>
-        <option value="3">Unión Vecinal de Trinidad </option>
-        <option value="4">CEII</option>
-        <option value="5">Unión Vecinal de Rivadavia</option>
+      <select name="seleccionOrganizacion" class="custom-select custom-select-lg mb-3" [(ngModel)]="organizacionSelect">
+        <option hidden selected>Organización</option>
+        <option  *ngFor="let org of organizaciones" [value]="org.id">{{org.nombre}}{{org.id}}</option>
       </select>
-
+      {{organizacionSelect}}
     </div>
 
     <div class="col-6">
 
-      <input class="form-control form-control-lg" type="number" placeholder="Cantidad">
+      <input class="form-control form-control-lg" type="number" placeholder="Cantidad" [(ngModel)]="cantidad">
 
 
     </div>
 
     <div class="col-6 animated fast">
       <!-- selecciona si es por unidades o kilogramo -->
-      <select class="custom-select custom-select-lg mb-3">
+      <select class="custom-select custom-select-lg mb-3" [(ngModel)]="unidades">
         <option selected>Unidad</option>
         <option value="1">Kilogramos</option>
         <option value="2">Unidades</option>
@@ -59,21 +55,21 @@
 
     <div class="col-6">
       <!-- seleciona la fecha -->
-      <input class="form-control form-control-lg" type="date">
+      <input class="form-control form-control-lg" type="date" [(ngModel)]="fecha">
 
 
     </div>
 
     <div class="col-6">
       <!-- seleciona la hora -->
-      <input class="form-control form-control-lg" type="time" name="" id="">
+      <input class="form-control form-control-lg" type="time" name="" id="" [(ngModel)]="hora">
 
     </div>
 
   </div>
   <!-- boton de confirmacion -->
   <div class="text-center mt-3 mb-5">
-    <button class="btn btn-outline-success btn-sx" type="button">Confirmar</button>
+    <button class="btn btn-outline-success btn-sx" type="button" (click)="confirmarSolicitud()">Confirmar</button>
   </div>
 
 

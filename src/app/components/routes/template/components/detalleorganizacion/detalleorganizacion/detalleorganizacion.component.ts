@@ -13,7 +13,7 @@ export class DetalleorganizacionComponent implements OnInit {
   ngOnInit(): void {
   }
   public tieneRecolector(): boolean{
-    return this.solicitud.tipo=="confirmada" ||this.solicitud.tipo=="pendiente";
+    return this.solicitud.acepta_org==true;//this.solicitud.tipo=="confirmada" ||this.solicitud.tipo=="pendiente";
   }
 
 }

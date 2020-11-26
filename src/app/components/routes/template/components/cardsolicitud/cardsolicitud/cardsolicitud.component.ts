@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Arbol } from 'src/app/interfaces/arbol';
 import { Solicitud } from 'src/app/interfaces/solicitud';
+import { ArbolesService } from 'src/app/services/arboles/arboles.service';
 
 @Component({
   selector: 'app-cardsolicitud',
@@ -8,9 +10,14 @@ import { Solicitud } from 'src/app/interfaces/solicitud';
 })
 export class CardsolicitudComponent implements OnInit {
   @Input() solicitud: Solicitud;
-  constructor() { }
+  arbol:Arbol;
+  constructor(private arbolesService: ArbolesService) { }
 
   ngOnInit(): void {
+    this.arbolesService.findArbol(this.solicitud.arbol)
+    .subscribe((response: Arbol) => {
+      this.arbol = response;
+    });
   }
 
 }

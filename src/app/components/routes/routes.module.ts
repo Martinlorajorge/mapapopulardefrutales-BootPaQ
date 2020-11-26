@@ -30,6 +30,8 @@ import { DetallerecolectorModule } from './template/detallerecolector/detallerec
 
 import { menu } from './menu';
 import { routes } from './routes';
+import { MisArbolesComponent } from './template/mis-arboles/mis-arboles/mis-arboles.component';
+import { NuevoArbolComponent } from './template/mis-arboles/nuevo-arbol/nuevo-arbol.component';
 
 @NgModule({
     imports: [
@@ -48,11 +50,12 @@ import { routes } from './routes';
         SolicituddedonacionModule,
         NuevoarbolModule,
         SharedModule,
-        RouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, { useHash: true }),
         PagesModule
     ],
     declarations: [
-     ],
+     MisArbolesComponent,
+     NuevoArbolComponent],
     exports: [
         RouterModule
     ]

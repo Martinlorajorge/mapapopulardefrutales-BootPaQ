@@ -16,7 +16,7 @@
       <div class="card-header">Cantidad de árboles: {{solicitud.cantidadFrutales}}.</div>
       <div class="card-body text-success">
         <ul *ngFor="let arbol of solicitud.arboles">
-          <li class="card-title">{{arbol.nombre}}: {{arbol.cantidad}}</li>
+          <li class="card-title">{{arbol.nom_especie}}: {{arbol.cantidad}}</li>
         </ul>
         <p class="card-text">Fecha y horario de retiro: {{solicitud.fecha}},{{solicitud.hora}} </p>
 

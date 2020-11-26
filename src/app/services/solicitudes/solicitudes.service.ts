@@ -7,12 +7,12 @@ import { Solicitud } from 'src/app/interfaces/solicitud';
   providedIn: 'root'
 })
 export class SolicitudesService {
-  apiBaseUrl:string ='https://072de871-cb96-4bcc-b2a9-06a8243ad4d9.mock.pstmn.io';
+  apiBaseUrl:string ='https://apimpf.herokuapp.com/';
 
 constructor(private http: HttpClient) {
  }
-public findAllConfirmadas(): Observable<any>{
-  return this.http.get(this.apiBaseUrl+'/solicitudesConfirmadas');
+public findAllSolicitudes(): Observable<any>{
+  return this.http.get(this.apiBaseUrl+'/solicitud');
 }
 public findAlldeOrganizaciones(): Observable<any>{
   return this.http.get(this.apiBaseUrl+'/solicitudesDeOrganizaciones');
@@ -21,7 +21,16 @@ public findAllPendientes(): Observable<any>{
   return this.http.get(this.apiBaseUrl+'/solicitudesPendientes');
 }
 
+//solicitud nueva
+public createSolicitud(solicitud: Solicitud): Observable<any>{
+  return this.http.post(this.apiBaseUrl+'/solicitud', solicitud);
+}
+
 //solicitudes de organizacion
+
+public findAllorgSolicitudes(): Observable<any>{
+  return this.http.get(this.apiBaseUrl+'/orgSolicitudesConfirmadas');
+}
 public findAllorgConfirmadas(): Observable<any>{
   return this.http.get(this.apiBaseUrl+'/orgSolicitudesConfirmadas');
 }

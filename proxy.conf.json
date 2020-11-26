@@ -1,0 +1,8 @@
+{
+    "/":{
+        "target":"https://apimpf.herokuapp.com",
+        "secure":false,
+        "changeOrigin":true,
+        "logLevel":"debug"
+    }
+}

@@ -20,11 +20,12 @@ export class NuevoarbolComponent implements OnInit {
     this.arbol={};
   }
   public guardarArbol(){
-    if(this.arbol.nombre!="Seleccione un Arbol..."&& this.arbol.nombre!=""){
+    if(this.arbol.nom_especie!="Seleccione un Arbol..."&& this.arbol.nom_especie!=""){
       this.arbol.lat=this.mapaGoogle.lat;
       this.arbol.lng=this.mapaGoogle.lng;
-      this.arbolesService.createArbol(this.arbol).subscribe(arbol => console.log(arbol))
       console.log(this.arbol);
+      this.arbolesService.createArbol(this.arbol).subscribe(arbol => console.log(arbol))
+      
     }else console.log("Error al cargar nuevo arbol");
   }
 
