@@ -16,8 +16,9 @@ export const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', loadChildren: () => import('./template/home/home.module').then(m => m.HomeModule) },
+            { path: '', redirectTo: 'mis-arboles', pathMatch: 'full' },
+            { path: 'mis-arboles', loadChildren: () => import('./template/home/home.module').then(m => m.HomeModule) },
+            //{ path: 'home', loadChildren: () => import('./template/home/home.module').then(m => m.HomeModule) },
             { path: 'dashboard', loadChildren: () => import('./template/dashboard/dashboard.module').then(m => m.DashboardModule) },
             { path: 'widgets', loadChildren: () => import('./template/widgets/widgets.module').then(m => m.WidgetsModule) },
             { path: 'material', loadChildren: () => import('./template/material/material.module').then(m => m.MaterialModule) },
@@ -29,6 +30,10 @@ export const routes: Routes = [
             { path: 'blog', loadChildren: () => import('./template/blog/blog.module').then(m => m.BlogModule) },
             { path: 'ecommerce', loadChildren: () => import('./template/ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
             { path: 'extras', loadChildren: () => import('./template/extras/extras.module').then(m => m.ExtrasModule) },
+            { path: 'mis-solicitudes', loadChildren: () => import('./template/missolicitudes/missolicitudes.module').then(m => m.MissolicitudesModule) }
+
+            
+
         ]
     },
 
@@ -42,6 +47,6 @@ export const routes: Routes = [
     { path: '500', component: Error500Component },
 
     // Not found
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: 'mis-arboles' }
 
 ];

@@ -2,16 +2,12 @@
 
   <div class="card-columns">
 
-    <div [routerLinkActive]="['/nuevoarbol']">
-      <a type="" [routerLink]="['/nuevoarbol']">
+    <div (click)="irNuevoArbol()">
+      <a type="" >
         <div class="card b mb-3">
           <div class="card-header">
-            <h3 class="mt-3 text-center text-green">AGREGAR <br> ARBÓL</h3>
+            <h3 class="mt-3 text-center text-green">AGREGAR <br> ÁRBOL</h3>
           </div>
-          <div class="card-body">
-            ...
-          </div>
-
         </div>
       </a>
     </div>
@@ -21,21 +17,14 @@
       <app-arbol [arbol]="arbol"></app-arbol>
     </div>
 
-
-
-
-
-
     <a type="remove" href="#/">
       <div class="card b mb-3">
         <div class="card-header">
-          <h3 class="mt-3 text-danger text-center">QUITAR <br> ARBÓL.</h3>
-        </div>
-        <div class="card-body">
-          ...
+          <h3 class="mt-3 text-danger text-center">QUITAR <br> ÁRBOL.</h3>
         </div>
       </div>
     </a>
 
   </div>
 </div>
+<router-outlet></router-outlet>

@@ -8,7 +8,7 @@ import { CardsolicitudDeOrganizacionModule } from '../components/cardsolicitud-d
 import { MissolicitudesComponent } from './missolicitudes/missolicitudes.component';
 
 const routes: Routes = [
-  { path: 'misolicitud', component: MissolicitudesComponent },
+  { path: '', component: MissolicitudesComponent },
 ];
 
 
