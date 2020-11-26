@@ -1,4 +1,3 @@
-
 <div class="container-home animated fast">
   <div class="nuevoa animated fast fadeIn text-center w-100 pt-2 pb-2">
     <h1 class="text-light">
@@ -6,11 +5,12 @@
     </h1>
   </div>
 
-  <ngb-accordion #acc="ngbAccordion">
+  <ngb-accordion class="animated fast fadeIn" #acc="ngbAccordion">
     <ngb-panel>
-      <ng-template ngbPanelHeader>
+      <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
-          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Confirmadas</button>
+          <button ngbPanelToggle
+            class="btn btn-outline-success container-fluid text-center btn-block ">Confirmadas</button>
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
@@ -20,9 +20,10 @@
       </ng-template>
     </ngb-panel>
     <ngb-panel>
-      <ng-template ngbPanelHeader>
+      <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
-          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Solicitudes de Recolección</button>
+          <button ngbPanelToggle class="btn btn-outline-success container-fluid text-center btn-block ">Solicitudes de
+            Recolección</button>
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
@@ -32,9 +33,10 @@
       </ng-template>
     </ngb-panel>
     <ngb-panel>
-      <ng-template ngbPanelHeader>
+      <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
-          <button ngbPanelToggle class="btn btn-link container-fluid text-center pl-0 ">Pendientes de confirmación</button>
+          <button ngbPanelToggle class="btn btn-outline-success container-fluid text-center btn-block ">Pendientes de
+            confirmación</button>
         </div>
       </ng-template>
       <ng-template ngbPanelContent>

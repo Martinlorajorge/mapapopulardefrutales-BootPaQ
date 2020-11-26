@@ -48,6 +48,11 @@ const PerfilorganizacionModule = {
     icon: 'icon-chemistry'
 };
 
+
+
+
+
+
 // const SolicituddedonacionModule = {
 //     text: 'Solicitud de Donacion',
 //     link: '/solicitud',
@@ -252,19 +257,19 @@ const PerfilorganizacionModule = {
 //     ]
 // };
 
-// const Pages = {
-//     text: 'Pages',
-//     link: '/pages',
-//     icon: 'icon-doc',
-//     submenu: [
-//         {
-//             text: 'Login',
-//             link: '/login'
-//         },
-//         {
-//             text: 'Register',
-//             link: '/register'
-//         },
+const Pages = {
+     text: 'Login y Registro',
+     link: '/pages',
+     icon: 'icon-doc',
+     submenu: [
+         {
+             text: 'Login',
+             link: '/login'
+         },
+         {
+             text: 'Register',
+             link: '/register'
+         },
 //         {
 //             text: 'Recover',
 //             link: '/recover'
@@ -285,8 +290,8 @@ const PerfilorganizacionModule = {
 //             text: 'Maintenance',
 //             link: '/maintenance'
 //         }
-//     ]
-// };
+     ]
+ };
 
 // const Blog = {
 //     text: 'Blog',
@@ -471,15 +476,45 @@ const MapaarbolesModule = {
     icon: 'icon-map'
 };
 
+const MicuentaorganizacionModule = {
+    text: 'Mi Cuenta',
+    link: '/micuenta',
+    icon: 'icon-notebook'
+};
+
+const RecolectoresModule = {
+    text: 'Recolectores',
+    link: '/recolectores',
+    icon: 'icon-user'
+};
+
+
+
+
+const FamiliasModule = {
+    text: 'Familias',
+    link: '/familias',
+    icon: 'icon-user'
+};
+
+const OrganizacionesModule = {
+    text: 'Organizaciones',
+    link: '/organizaciones',
+    icon: 'icon-home'
+};
+
+
+
+
 // const headingComponents = {
 //     text: 'Components',
 //     heading: true
 // };
 
-// const headingMore = {
-//     text: 'More',
-//     heading: true
-// };
+const headingMore = {
+     text: 'Administrador',
+     heading: true
+ };
 
 export const menu = [
     headingMain,
@@ -494,14 +529,18 @@ export const menu = [
     HomeorganizacionModule,
     SolicitudrecoleccionModule,
     MapaarbolesModule,
+    MicuentaorganizacionModule,
+    RecolectoresModule,
     // Material,
     // Elements,
     // Forms,
     // Charts,
     // Tables,
     // Maps,
-    // headingMore,
-    // Pages,
+    Pages,
+    headingMore,
+    FamiliasModule,
+    OrganizacionesModule,
     // Blog,
     // Ecommerce,
     // Extras
