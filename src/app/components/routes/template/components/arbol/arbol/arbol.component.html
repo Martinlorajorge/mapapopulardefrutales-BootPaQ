@@ -5,15 +5,16 @@
   <div class="card-body">
     <h5 class="card-title">{{arbol.nom_especie}}</h5>
     <p class="card-text">{{arbol.direccion}}</p>
-    <p class="card-text">{{arbol.id}}</p>
-    <p class="card-text"><small class="text-muted">Retirar:...</small></p>
+
+    <div class="">
+      <label class="mda-checkbox">
+        <input type="checkbox" checked="" />
+        <em class="bg-green-500"></em>Hacer Publico...</label>
+    </div>
+
+    <div class="container">
+      <a class="btn btn-outline-success btn-block" (click)="nuevaSolicitud()">Solicitud de Donación</a>
+    </div>
   </div>
-  <div class="mb-2 mr-2">
-    <label class="mda-checkbox ml-3">
-      <input type="checkbox" checked="" />
-      <em class="bg-green-500"></em>Hacer Publico...</label>
-  </div>
-  <div class="container">
-    <a class="btn btn-outline-success btn-block mb-1" (click)="nuevaSolicitud()">Solicitud de Donación</a>
-  </div>
+  
 </div>

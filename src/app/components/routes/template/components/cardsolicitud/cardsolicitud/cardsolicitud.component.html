@@ -3,7 +3,7 @@
 <!-- confirmadas y Pendientes son iguales, esta bien este componente, solicitud de organizacion se muestra distinto,-->
 <!-- asi que es un componente aparte, movi su css a cardsolicitud de organizacion -->
 
-<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;">
+<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;" (click)="abreSolicitud()">
 
   <div class="row no-gutters">
     <!-- <div class="col-md-4">
@@ -21,7 +21,9 @@
         <p class="card-text">Fecha y horario de retiro: {{solicitud.fecha}},{{solicitud.hora}} </p>
 
       </div>
-      <a *ngIf="solicitud.tipo!='pendientes'" [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a>
+      <!-- <a *ngIf="isConfirmada()" [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a> -->
+      <a class="text-right">Ver mas...</a>
+
     </div>
   </div>
   

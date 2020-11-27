@@ -31,8 +31,7 @@ export class HomeComponent implements OnInit {
     }
 
     public irNuevoArbol(){
-        this.router.navigate(['/nuevoarbol']), error=> console.log(error);
-        console.log("ejecuto");
+        this.router.navigate(['mis-arboles/nuevoarbol']);
     }
 
 

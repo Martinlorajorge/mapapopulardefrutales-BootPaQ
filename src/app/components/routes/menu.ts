@@ -1,6 +1,6 @@
 const Home = {
     text: 'Mis Arboles',
-    link: '/home',
+    link: '/mis-arboles',
     icon: 'icon-home'
 };
 
@@ -32,7 +32,7 @@ const Home = {
 
 const MissolicitudesModule = {
     text: 'Mis Solicitudes',
-    link: '/misolicitud',
+    link: '/mis-solicitudes',
     icon: 'icon-note'
 };
 

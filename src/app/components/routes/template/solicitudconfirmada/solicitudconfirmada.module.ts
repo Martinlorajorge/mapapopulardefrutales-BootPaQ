@@ -7,9 +7,11 @@ import { CardrecolectorModule } from '../components/cardrecolector/cardrecolecto
 
 
 const routes: Routes = [
-
-  { path: 'confirmadas', component: SolicitudconfirmadaComponent },
-  { path: 'cardrecolector', component: CardrecolectorModule },
+  //tambien poner un calco de las path en cada modulo para que funcione
+  { path: 'confirmada/:id', component: SolicitudconfirmadaComponent},
+  { path: 'a-confirmar/:id', component: SolicitudconfirmadaComponent},
+  // { path: 'confirmadas', component: SolicitudconfirmadaComponent },
+  //{ path: 'cardrecolector', component: CardrecolectorModule }
 ];
 
 

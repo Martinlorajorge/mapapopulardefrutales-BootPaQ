@@ -23,17 +23,6 @@ export class MissolicitudesComponent implements OnInit {
     this.divideSolicitudes();
   });
 
-   
-
-  // this.solicitudesService.findAlldeOrganizaciones()
-  // .subscribe((response: Array<Solicitud>) => {
-  //   this.solicitudesDeOrganizaciones = response;
-  // });
-  // this.solicitudesService.findAllPendientes()
-  // .subscribe((response: Array<Solicitud>) => {
-  //   this.solicitudesPendientes = response;
-  // });
-
   }
   private divideSolicitudes(){
     this.solicitudesConfirmadas=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == true));

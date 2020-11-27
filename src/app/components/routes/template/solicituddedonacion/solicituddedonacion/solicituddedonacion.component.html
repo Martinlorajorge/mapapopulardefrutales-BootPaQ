@@ -31,9 +31,8 @@
 
       <select name="seleccionOrganizacion" class="custom-select custom-select-lg mb-3" [(ngModel)]="organizacionSelect">
         <option hidden selected>Organización</option>
-        <option  *ngFor="let org of organizaciones" [value]="org.id">{{org.nombre}}{{org.id}}</option>
+        <option  *ngFor="let org of organizaciones" [value]="org.id">{{org.nombre}}</option>
       </select>
-      {{organizacionSelect}}
     </div>
 
     <div class="col-6">

@@ -7,8 +7,12 @@ import { FormsModule} from '@angular/forms';
 
 
 const routes: Routes = [
-  { path: 'solicitud/:id', component: SolicituddedonacionComponent },
+  //{ path: 'confirmada/:id', component: SolicituddedonacionComponent},
+  //{ path: 'a-confirmar/:id', component: SolicituddedonacionComponent},
+  { path: 'nuevasolicitud/:id', component: SolicituddedonacionComponent },
   { path: 'detalle', component: DetallededonacionModule },
+  //{ path: '', component: SolicituddedonacionComponent },
+
 ];
 
 @NgModule({

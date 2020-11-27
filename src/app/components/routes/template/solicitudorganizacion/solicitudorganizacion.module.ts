@@ -10,8 +10,9 @@ import { SolicituddedonacionModule } from '../solicituddedonacion/solicituddedon
 
 const routes: Routes = [
 
-  { path: 'peticion', component: SolicitudorganizacionComponent },
-  { path: 'Cardrecolector', component: CardrecolectorModule },
+  { path: 'de-organizacion/:id', component: SolicitudorganizacionComponent},
+  //{ path: 'peticion', component: SolicitudorganizacionComponent },
+  //{ path: 'Cardrecolector', component: CardrecolectorModule },
   { path: 'solicitud', component: SolicituddedonacionModule },
 
 

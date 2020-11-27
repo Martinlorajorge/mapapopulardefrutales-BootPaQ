@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { ArbolModule } from '../components/arbol/arbol.module';
 import { NuevoarbolModule } from '../nuevoarbol/nuevoarbol.module';
 import { NuevoarbolComponent } from '../nuevoarbol/nuevoarbol/nuevoarbol.component';
+import { SolicituddedonacionComponent } from '../solicituddedonacion/solicituddedonacion/solicituddedonacion.component';
 
 
 
@@ -17,7 +18,10 @@ const routes: Routes = [
         children:[
             {
                 path: 'nuevoarbol', component: NuevoarbolComponent
-            }
+            },
+            {
+                 path: 'nuevasolicitud/:id', component: SolicituddedonacionComponent
+            },
         ]   
     }
 ];
