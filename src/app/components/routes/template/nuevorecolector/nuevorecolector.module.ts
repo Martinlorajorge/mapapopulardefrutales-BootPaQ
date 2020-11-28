@@ -7,6 +7,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     { path: 'nuevorecolector', component: NuevorecolectorComponent },
+    {
+      path: 'nuevorecolector/:id', component: NuevorecolectorComponent
+    },
 ];
 
 

@@ -5,14 +5,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-    { path: 'detallerecolector', component: DetallerecolectorComponent },
+    // { path: 'detallerecolector', component: DetallerecolectorComponent },
+    {
+      path: 'detallerecolector/:id', component: DetallerecolectorComponent
+    },
 ];
 
 
 
 @NgModule({
   declarations: [
-    DetallerecolectorComponent
+    // DetallerecolectorComponent
   ],
   imports: [
     RouterModule.forChild(routes),

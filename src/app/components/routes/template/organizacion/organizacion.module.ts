@@ -15,7 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-     OrganizacionComponent
+    //  OrganizacionComponent
   ],
   imports: [
     OrganizacioncardModule,

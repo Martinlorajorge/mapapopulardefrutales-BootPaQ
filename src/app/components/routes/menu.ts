@@ -464,11 +464,11 @@ const HomeorganizacionModule = {
 };
 
 
-const SolicitudrecoleccionModule = {
-    text: 'solicitud recoleccion',
-    link: '/solicitudrecoleccion',
-    icon: 'icon-home'
-};
+// const SolicitudrecoleccionModule = {
+//     text: 'solicitud recoleccion',
+//     link: '/solicitudrecoleccion',
+//     icon: 'icon-home'
+// };
 
 const MapaarbolesModule = {
     text: 'Mapa',
@@ -527,7 +527,7 @@ export const menu = [
     // Widgets,
     headingComponents,
     HomeorganizacionModule,
-    SolicitudrecoleccionModule,
+    // SolicitudrecoleccionModule,
     MapaarbolesModule,
     MicuentaorganizacionModule,
     RecolectoresModule,

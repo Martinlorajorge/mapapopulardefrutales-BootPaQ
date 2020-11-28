@@ -36,6 +36,16 @@ export const routes: Routes = [
             // tslint:disable-next-line: max-line-length
             { path: 'organizaciones', loadChildren: () => import('./template/organizaciones/organizaciones.module').then(m => m.OrganizacionesModule) },
             { path: 'familias', loadChildren: () => import('./template/familias/familias.module').then(m => m.FamiliasModule) },
+            // tslint:disable-next-line: max-line-length
+            { path: 'recolectores', loadChildren: () => import('./template/recolectores/recolectores.module').then(m => m.RecolectoresModule)},
+            // tslint:disable-next-line: max-line-length
+            { path: 'micuenta', loadChildren: () => import('./template/micuentaorganizacion/micuentaorganizacion.module').then(m => m.MicuentaorganizacionModule)},
+            { path: 'mapaarboles', loadChildren: () => import('./template/mapaarboles/mapaarboles.module').then(m => m.MapaarbolesModule)},
+            // tslint:disable-next-line: max-line-length
+            { path: 'homeorganizacion', loadChildren: () => import('./template/homeorganizacion/homeorganizacion.module').then(m => m.HomeorganizacionModule)},
+            // tslint:disable-next-line: max-line-length
+            { path: 'perfilorganizacion', loadChildren: () => import('./template/perfilorganizacion/perfilorganizacion.module').then(m => m.PerfilorganizacionModule)},
+            { path: 'cuidados', loadChildren: () => import('./template/cuidadodearboles/cuidadodearboles.module').then(m => m.CuidadodearbolesModule)},
 
 
 
