@@ -3,10 +3,18 @@ import { CommonModule } from '@angular/common';
 import { OrganizacionesComponent } from './organizaciones/organizaciones.component';
 import { Routes, RouterModule } from '@angular/router';
 import { OrganizacionescardModule } from '../components/organizacionescard/organizacionescard.module';
+import { OrganizacionComponent } from '../organizacion/organizacion/organizacion.component';
 
 
 const routes: Routes = [
-    { path: 'organizaciones', component: OrganizacionesComponent },
+    {
+      path: '', component: OrganizacionesComponent,
+      children: [
+        {
+          path: 'organizacion/:id', component: OrganizacionComponent
+        },
+      ]
+    },
 ];
 
 
