@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 
-  { path: 'cuidados', component: CuidadodearbolesComponent },
+  { path: '', component: CuidadodearbolesComponent },
 
 
 ];

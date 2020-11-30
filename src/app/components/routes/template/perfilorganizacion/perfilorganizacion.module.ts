@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 
-  { path: 'perfilorganizacion', component: PerfilorganizacionComponent },
+  { path: '', component: PerfilorganizacionComponent },
 
 
 ];

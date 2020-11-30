@@ -3,10 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FamiliasComponent } from './familias/familias.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FamiliascardModule } from '../components/familiascard/familiascard.module';
+import { FamiliaComponent } from '../familia/familia/familia.component';
 
 
 const routes: Routes = [
-    { path: 'familias', component: FamiliasComponent },
+    { path: '', component: FamiliasComponent,
+       children: [
+          {
+            path: 'familia/:id', component: FamiliaComponent
+          },
+        ]
+  },
 ];
 
 

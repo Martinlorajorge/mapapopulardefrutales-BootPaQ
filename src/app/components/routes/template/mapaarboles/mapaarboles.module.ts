@@ -8,7 +8,13 @@ import { MapsModule } from '../maps/maps.module';
 
 const routes: Routes = [
 
-  { path: 'mapaarboles', component: MapaarbolesComponent },
+  { path: '', component: MapaarbolesComponent,
+    // children:[
+    //    {
+    //      path: '', component: 
+    //    },
+    //  ]
+},
   { path: 'google', component: MapsModule },
 
 ];
