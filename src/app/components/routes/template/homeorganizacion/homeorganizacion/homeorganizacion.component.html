@@ -15,7 +15,7 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>
@@ -28,7 +28,7 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeFamilias">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>
@@ -41,7 +41,7 @@
       </ng-template>
       <ng-template ngbPanelContent>
         <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesPendientes">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>

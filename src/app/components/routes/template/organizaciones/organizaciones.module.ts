@@ -12,7 +12,7 @@ const routes: Routes = [
       children: [
         {
           path: 'organizacion/:id', component: OrganizacionComponent
-        },
+        }
       ]
     },
 ];

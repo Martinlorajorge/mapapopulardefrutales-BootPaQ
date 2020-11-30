@@ -4,8 +4,8 @@ import { OrganizacioncardComponent } from './organizacioncard/organizacioncard.c
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-
-  { path: 'organizacioncard', component: OrganizacioncardComponent },
+  
+  { path: 'organizacioncard', component: OrganizacioncardComponent }
 
 ];
 

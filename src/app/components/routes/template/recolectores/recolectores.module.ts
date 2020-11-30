@@ -5,7 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CardrecolectorModule } from '../components/cardrecolector/cardrecolector.module';
 import { NuevorecolectorComponent } from '../nuevorecolector/nuevorecolector/nuevorecolector.component';
+import { NuevorecolectorModule } from '../nuevorecolector/nuevorecolector.module';
+
 import { DetallerecolectorComponent } from '../detallerecolector/detallerecolector/detallerecolector.component';
+import { DetallerecolectorModule } from '../detallerecolector/detallerecolector.module';
 
 
 
@@ -15,7 +18,7 @@ const routes: Routes = [
     { path: '', component: RecolectoresComponent,
     children:[
       {
-        path: 'nuevorecolector/:id', component: NuevorecolectorComponent
+        path: 'nuevorecolector', component: NuevorecolectorComponent
       },
       {
         path: 'detallerecolector/:id', component: DetallerecolectorComponent
@@ -35,7 +38,9 @@ const routes: Routes = [
   imports: [
     CardrecolectorModule,
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    NuevorecolectorModule,
+    DetallerecolectorModule
   ],
   exports: [
     RecolectoresComponent,

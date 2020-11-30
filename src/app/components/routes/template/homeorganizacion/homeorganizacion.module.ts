@@ -8,6 +8,7 @@ import { CardconforgModule } from '../components/cardconforg/cardconforg.module'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SolicitudconfirmadaComponent } from '../solicitudconfirmada/solicitudconfirmada/solicitudconfirmada.component';
 import { SolicitudrecoleccionComponent } from '../solicitudrecoleccion/solicitudrecoleccion/solicitudrecoleccion.component';
+import { CardsolicitudModule } from '../components/cardsolicitud/cardsolicitud.module';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
     imports: [
         CardsolirecModule,
         CardconforgModule,
+        CardsolicitudModule,
         MaterialModule,
         CommonModule,
         NgbModule,

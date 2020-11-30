@@ -15,7 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    // DetallerecolectorComponent
+    DetallerecolectorComponent
   ],
   imports: [
     RouterModule.forChild(routes),

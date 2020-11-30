@@ -8,9 +8,9 @@
 
 
 
-  <div class="col-10 ml-auto mr-auto my-3">
-    <a class="btn btn-outline-success btn-block" [routerLink]="['/recolectores/nuevorecolector/:id']"
-      routerLinkActive="router-link-active">Agregar Recolector</a>
+  <div class="col-10 ml-auto mr-auto my-3" (click)="nuevoRecolector()">
+    <a class="btn btn-outline-success btn-block" 
+      >Agregar Recolector</a>
   </div>
 
 
@@ -36,3 +36,4 @@
 
 
 </div>
+<router-outlet></router-outlet>

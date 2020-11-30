@@ -40,6 +40,7 @@ export const routes: Routes = [
             { path: 'recolectores', loadChildren: () => import('./template/recolectores/recolectores.module').then(m => m.RecolectoresModule)},
             // tslint:disable-next-line: max-line-length
             { path: 'micuenta', loadChildren: () => import('./template/micuentaorganizacion/micuentaorganizacion.module').then(m => m.MicuentaorganizacionModule)},
+            //FALTA MAPA
             { path: 'mapaarboles', loadChildren: () => import('./template/mapaarboles/mapaarboles.module').then(m => m.MapaarbolesModule)},
             // tslint:disable-next-line: max-line-length
             { path: 'homeorganizacion', loadChildren: () => import('./template/homeorganizacion/homeorganizacion.module').then(m => m.HomeorganizacionModule)},
