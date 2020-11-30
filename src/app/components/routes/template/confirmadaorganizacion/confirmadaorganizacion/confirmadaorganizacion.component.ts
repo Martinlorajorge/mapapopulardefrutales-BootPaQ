@@ -19,9 +19,9 @@ export class ConfirmadaorganizacionComponent implements OnInit {//solicitudconfi
 
   ngOnInit(): void {
 
-    this.solicitudService.findSolicitudConfirmada(parseInt(this.idSolicitud)).subscribe((response : Solicitud)=>{
-      this.solicitud=response;
-    });
+    // this.solicitudService.findSolicitudConfirmada(parseInt(this.idSolicitud)).subscribe((response : Solicitud)=>{
+    //   this.solicitud=response;
+    // });
   }
 
 }

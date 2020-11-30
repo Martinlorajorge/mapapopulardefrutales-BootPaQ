@@ -8,4 +8,6 @@ export interface Solicitud {
     organizacion?:number;
     acepta_org:boolean;
     acepta_familia:boolean;
+    cantidad?:string;
+    recolector?:number;
 }

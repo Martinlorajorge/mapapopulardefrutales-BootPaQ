@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Solicitud } from 'src/app/interfaces/solicitud';
 
 @Component({
   selector: 'app-cardrecolector',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardrecolector.component.scss']
 })
 export class CardrecolectorComponent implements OnInit {
-
+  @Input() solicitud: Solicitud;
   constructor() { }
 
   ngOnInit(): void {
+    
+
   }
 
 }

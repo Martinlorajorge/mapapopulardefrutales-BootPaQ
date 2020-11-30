@@ -18,8 +18,8 @@ export class SolicitudrecoleccionComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.solicitudService.findSolicitudaConfirmar(parseInt(this.idSolicitud)).subscribe((response : Solicitud)=>{
-      this.solicitud=response;
-    });
+    // this.solicitudService.findSolicitudaConfirmar(parseInt(this.idSolicitud)).subscribe((response : Solicitud)=>{
+    //   this.solicitud=response;
+    // });
   }
 }

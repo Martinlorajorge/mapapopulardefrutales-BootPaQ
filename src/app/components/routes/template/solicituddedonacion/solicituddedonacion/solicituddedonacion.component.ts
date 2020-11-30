@@ -23,14 +23,14 @@ export class SolicituddedonacionComponent implements OnInit {
   public fecha:string;
   public hora:string;
   constructor(private arbolesService: ArbolesService, private route: ActivatedRoute, private organizacionesService:OrganizacionesService, private solicitudesService: SolicitudesService) { 
-    this.idArbol=parseInt(this.route.snapshot.paramMap.get('id'));
+    this.idArbol=parseInt(this.route.snapshot.paramMap.get('id')); 
   }
   public confirmarSolicitud(){
     if(this.organizacionSelect!=""&& this.organizacionSelect!="Organización"){
       if(this.cantidad!=""&&this.unidades!=""&&this.fecha!=""&&this.hora!=""){
         this.nuevaSolicitud.fecha=this.fecha;
         this.nuevaSolicitud.hora=this.hora;
-        //this.nuevaSolicitud.cantidad=this.cantidad+this.unidades;
+        this.nuevaSolicitud.cantidad=this.cantidad+" "+this.unidades;
         
         this.nuevaSolicitud.organizacion=parseInt(this.organizacionSelect);
         console.log(this.nuevaSolicitud);

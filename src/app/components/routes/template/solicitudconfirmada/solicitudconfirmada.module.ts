@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SolicitudconfirmadaComponent } from './solicitudconfirmada/solicitudconfirmada.component';
 import { CardrecolectorModule } from '../components/cardrecolector/cardrecolector.module';
+import { CardDetalleSolicitudModule } from '../components/card-detalle-solicitud/card-detalle-solicitud.module';
 
 
 const routes: Routes = [
@@ -14,11 +15,6 @@ const routes: Routes = [
   //{ path: 'cardrecolector', component: CardrecolectorModule }
 ];
 
-
-
-
-
-
 @NgModule({
   declarations: [
     SolicitudconfirmadaComponent
@@ -26,7 +22,8 @@ const routes: Routes = [
   imports: [
     CardrecolectorModule,
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    CardDetalleSolicitudModule
   ],
   exports: [
     SolicitudconfirmadaComponent,

@@ -3,7 +3,7 @@
 <!-- confirmadas y Pendientes son iguales, esta bien este componente, solicitud de organizacion se muestra distinto,-->
 <!-- asi que es un componente aparte, movi su css a cardsolicitud de organizacion -->
 
-<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;" (click)="abreSolicitud()">
+<div class="card border-success mr-auto ml-auto mt-3 mb-3" (click)="abreSolicitud()">
 
   <div class="row no-gutters">
     <!-- <div class="col-md-4">
@@ -12,19 +12,19 @@
     <div class="col-8">
 
 
-      <div class="card-header">Organización: {{solicitud.organizacion}}.</div>
-      <div class="card-header">Cantidad de árboles: {{solicitud.cantidadFrutales}}.</div>
-      <div class="card-body text-success">
-        <ul *ngFor="let arbol of solicitud.arboles">
-          <li class="card-title">{{arbol.nom_especie}}: {{arbol.cantidad}}</li>
-        </ul>
-        <p class="card-text">Fecha y horario de retiro: {{solicitud.fecha}},{{solicitud.hora}} </p>
-
+      <div id="imagenContainer" class="card-header block">
+        <img src="{{arbol.galeria}}" class="card-img-top" alt="...">
       </div>
-      <!-- <a *ngIf="isConfirmada()" [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a> -->
-      <a class="text-right">Ver mas...</a>
+      
 
     </div>
+    <div class="card-body block">
+      <div class="text-success">{{arbol.nom_especie}}</div>
+      <div class="card-title">Organización: {{organizacion.nombre}}.</div>
+      <div id="vermas">Ver más...</div>
+    </div>
+    <!-- <a *ngIf="isConfirmada()" [routerLink]="['/confirmadas']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a> -->
+    <!-- <a class="text-right">Ver mas...</a> -->
   </div>
   
 </div>

@@ -18,18 +18,18 @@ export class HomeorganizacionComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.solicitudesService.findAllorgConfirmadas()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesConfirmadas = response;
-  });
-  this.solicitudesService.findAllorgdeFamilias()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesDeFamilias = response;
-  });
-  this.solicitudesService.findAllorgPendientes()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesPendientes = response;
-  });
+  //     this.solicitudesService.findAllorgConfirmadas()
+  // .subscribe((response: Array<Solicitud>) => {
+  //   this.solicitudesConfirmadas = response;
+  // });
+  // this.solicitudesService.findAllorgdeFamilias()
+  // .subscribe((response: Array<Solicitud>) => {
+  //   this.solicitudesDeFamilias = response;
+  // });
+  // this.solicitudesService.findAllorgPendientes()
+  // .subscribe((response: Array<Solicitud>) => {
+  //   this.solicitudesPendientes = response;
+  // });
 
   }
 

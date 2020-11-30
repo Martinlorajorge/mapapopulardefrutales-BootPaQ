@@ -8,6 +8,7 @@ import { PagesModule } from './template/pages/pages.module';
 import { SolicituddedonacionModule } from './template/solicituddedonacion/solicituddedonacion.module';
 //import { MissolicitudesModule } from './template/missolicitudes/missolicitudes.module';
 import { SolicitudconfirmadaModule } from './template/solicitudconfirmada/solicitudconfirmada.module';
+//import { ConfirmarSolicitudModule} from './template/confirmar-solicitud/confirmar-solicitud.module';
 import { CuidadodearbolesModule } from './template/cuidadodearboles/cuidadodearboles.module';
 import { PerfilorganizacionModule } from './template/perfilorganizacion/perfilorganizacion.module';
 
@@ -58,6 +59,7 @@ import { routes } from './routes';
         HomeorganizacionModule,
         PerfilorganizacionModule,
         CuidadodearbolesModule,
+        //ConfirmarSolicitudModule,
         SolicitudconfirmadaModule,
         //MissolicitudesModule,
         ConfirmadaorganizacionModule,

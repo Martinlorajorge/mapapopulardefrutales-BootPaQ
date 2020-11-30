@@ -8,6 +8,8 @@ import { CardsolicitudDeOrganizacionModule } from '../components/cardsolicitud-d
 import { MissolicitudesComponent } from './missolicitudes/missolicitudes.component';
 import { SolicitudorganizacionComponent } from '../solicitudorganizacion/solicitudorganizacion/solicitudorganizacion.component';
 import { SolicitudconfirmadaComponent } from '../solicitudconfirmada/solicitudconfirmada/solicitudconfirmada.component';
+import { ConfirmarSolicitudComponent } from '../confirmar-solicitud/confirmar-solicitud/confirmar-solicitud.component';
+import { ConfirmarSolicitudModule } from '../confirmar-solicitud/confirmar-solicitud.module';
 
 const routes: Routes = [
   { 
@@ -21,7 +23,11 @@ const routes: Routes = [
       },
       {
         path: 'de-organizacion/:id', component: SolicitudorganizacionComponent
+      },
+      {
+        path: 'confirmar/:id', component: ConfirmarSolicitudModule
       }
+      
     ]
   },  
 ];
