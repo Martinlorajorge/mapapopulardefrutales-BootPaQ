@@ -12,7 +12,7 @@ const routes: Routes = [
     //     path: 'nuevorecolector/:id', component: NuevorecolectorComponent
     //   },
     // ]
-  },
+  }
 ];
 
 
@@ -26,8 +26,8 @@ const routes: Routes = [
     CommonModule
   ],
   exports: [
-    RouterModule,
-    MicuentaorganizacionComponent
+    MicuentaorganizacionComponent,
+    RouterModule
   ]
 })
 export class MicuentaorganizacionModule { }

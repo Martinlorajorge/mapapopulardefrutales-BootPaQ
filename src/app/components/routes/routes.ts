@@ -41,7 +41,8 @@ export const routes: Routes = [
             // tslint:disable-next-line: max-line-length
             { path: 'micuenta', loadChildren: () => import('./template/micuentaorganizacion/micuentaorganizacion.module').then(m => m.MicuentaorganizacionModule)},
             //FALTA MAPA
-            { path: 'mapaarboles', loadChildren: () => import('./template/mapaarboles/mapaarboles.module').then(m => m.MapaarbolesModule)},
+            { path: 'mapa-arboles', loadChildren: () => import('./template/mapaarboles/mapaarboles.module').then(m => m.MapaarbolesModule)},
+            
             // tslint:disable-next-line: max-line-length
             { path: 'homeorganizacion', loadChildren: () => import('./template/homeorganizacion/homeorganizacion.module').then(m => m.HomeorganizacionModule)},
             // tslint:disable-next-line: max-line-length

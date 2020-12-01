@@ -14,29 +14,25 @@ const routes: Routes = [
     //      path: '', component: 
     //    },
     //  ]
-},
-  { path: 'google', component: MapsModule },
+}
 
 ];
-
-
-
-
 
 @NgModule({
   declarations: [
     MapaarbolesComponent,
   ],
   imports: [
-    MapsModule,
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    MapsModule,
   ],
-  // providers: [
-  //   MapsModule,
-  // ],
+   providers: [
+     MapsModule,
+   ],
   exports: [
     MapaarbolesComponent,
+    RouterModule
  ]
 })
 export class MapaarbolesModule { }

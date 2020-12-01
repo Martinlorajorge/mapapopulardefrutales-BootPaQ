@@ -472,7 +472,7 @@ const HomeorganizacionModule = {
 
 const MapaarbolesModule = {
     text: 'Mapa',
-    link: '/mapaarboles',
+    link: '/mapa-arboles',
     icon: 'icon-map'
 };
 
