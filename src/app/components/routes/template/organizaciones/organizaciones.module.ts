@@ -4,6 +4,7 @@ import { OrganizacionesComponent } from './organizaciones/organizaciones.compone
 import { Routes, RouterModule } from '@angular/router';
 import { OrganizacionescardModule } from '../components/organizacionescard/organizacionescard.module';
 import { OrganizacionComponent } from '../organizacion/organizacion/organizacion.component';
+import { OrganizacionModule } from '../organizacion/organizacion.module';
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
       path: '', component: OrganizacionesComponent,
       children: [
         {
-          path: 'organizacion/:id', component: OrganizacionComponent
+          path: 'organizacion/:id', component: OrganizacionModule
         }
       ]
     },

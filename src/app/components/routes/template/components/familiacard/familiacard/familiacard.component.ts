@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Familia } from 'src/app/interfaces/familia';
 
 @Component({
   selector: 'app-familiacard',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./familiacard.component.scss']
 })
 export class FamiliacardComponent implements OnInit {
-
+  @Input() familia:Familia;
   constructor() { }
 
   ngOnInit(): void {

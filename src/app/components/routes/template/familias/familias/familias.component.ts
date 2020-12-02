@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Familia } from 'src/app/interfaces/familia';
+import { FamiliasService } from 'src/app/services/familias/familias.service';
 
 @Component({
   selector: 'app-familias',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./familias.component.scss']
 })
 export class FamiliasComponent implements OnInit {
-
-  constructor() { }
+  public familias:Array<Familia>;
+  constructor(private familiasService:FamiliasService) { }
 
   ngOnInit(): void {
+    this.familiasService.findAllFamilias()
+    .subscribe((response: Array<Familia>) => {
+    this.familias = response;
+  });
   }
+  
 
 }
