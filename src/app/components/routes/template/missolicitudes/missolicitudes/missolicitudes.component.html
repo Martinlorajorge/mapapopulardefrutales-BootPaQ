@@ -9,20 +9,23 @@
   <div class="animated fast fadeIn">
 
 
-    <h3 class="btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-circle">Confirmadas</h3>
+    <h3 class="btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Confirmadas</h3>
 
     <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
       <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
     </div>
 
-    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-circle">Solicitudes de
+    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Solicitudes de
       Organizaciones</h3>
 
     <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeOrganizaciones">
       <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
     </div>
 
-    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-circle">Pendiente de
+    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Pendiente de
       confirmación del
       recolector
     </h3>
