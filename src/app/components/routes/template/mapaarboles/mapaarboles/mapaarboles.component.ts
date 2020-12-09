@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GoogleComponent } from '../../maps/google/google.component';
+//import { GoogleComponent } from '../../maps/google/google.component';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -10,9 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MapaarbolesComponent implements OnInit {
 
-  constructor(public googleComponent: GoogleComponent) { }
+  constructor() { }//public googleComponent: GoogleComponent
 
-  @ViewChild(GoogleComponent) mapaGoogle;
+  //@ViewChild(GoogleComponent) mapaGoogle;
 
 
 

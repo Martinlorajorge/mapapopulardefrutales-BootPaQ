@@ -42,7 +42,7 @@ export class SolicitudorganizacionComponent implements OnInit {
 
   }
   public confirmar(){
-    console.log('/mis-solicitudes'+'/confirmar/'+this.solicitud.id+'aaaaaaaaaaaaaaaaa');
+    console.log('/mis-solicitudes'+'/confirmar/'+this.solicitud.id);
     this.router.navigate(['/mis-solicitudes/confirmar/'+this.solicitud.id]);
   }
 

@@ -15,4 +15,7 @@ public findRecolector(id:number){
   const url =this.apiBaseUrl+'/recolector/'+id;
   return this.http.get<Recolector>(url);
 }
+public findAll(): Observable<Recolector[]>{
+  return this.http.get<Recolector[]>(this.apiBaseUrl+'/recolector');
+}
 }

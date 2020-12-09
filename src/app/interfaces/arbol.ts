@@ -6,5 +6,5 @@ export interface Arbol {
     direccion?:string;
     lat?:number;
     lng?:number;
-    idFamilia?:number;
+    id_familia?:number;
 }

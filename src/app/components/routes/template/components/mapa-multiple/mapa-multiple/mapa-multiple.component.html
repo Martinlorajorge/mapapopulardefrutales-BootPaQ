@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-body">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [scrollwheel]="scrollwheel"
+              class="gmap" [fullscreenControl]="true" *ngIf="marcadores!=undefined"> 
+
+              <agm-marker  #markerElem (mouseOver)="window.open()" (mouseOut)="window.close()" *ngFor="let marcador of marcadores" [latitude]="marcador.arbol.lat" [longitude]="marcador.arbol.lng" 
+              [label]="marcador.arbol.nom_especie" (mapClick)="openInfo(markerElem)">
+                <agm-info-window #window >
+                    <h6>{{marcador.arbol.nom_especie}}</h6>
+                    <p><strong>Familia: {{marcador.familia.nombre}}</strong></p>
+                    <div class="center">
+                      <button class="btn btn-success" [routerLink]="['/mapa-arboles/nuevasolicitud', marcador.arbol.id]">Solicitar</button>
+                    </div>
+                    
+                </agm-info-window>
+              </agm-marker>
+            </agm-map>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
