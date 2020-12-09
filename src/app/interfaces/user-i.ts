@@ -1,4 +1,8 @@
 export interface UserI {
-    email:string;
-    password:string;
+    usuario:string;
+    clave:string;
+    tipo?: number,
+    idAdmin?: number,
+    idOrganizacion?: number,
+    idFamilia?: number
 }

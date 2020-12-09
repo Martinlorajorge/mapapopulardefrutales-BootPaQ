@@ -3,5 +3,5 @@ export interface Representante {
     nomyape: string,
     direccion: string,
     nro_contacto: number,
-    idorganizacion: number
+    idorganizacion?: number
 }

@@ -500,7 +500,7 @@ const FamiliasModule = {
 const OrganizacionesModule = {
     text: 'Organizaciones',
     link: '/organizaciones',
-    icon: 'icon-home'
+    icon: 'icon-tree'
 };
 
 

@@ -8,7 +8,7 @@
         </a>
       </div>
       <div class="card-body">
-        <p class="text-center py-2">REGÍSTRESE PARA OBTENER ACCESO INSTANTÁNEO.</p>
+        <p class="text-center py-2">REGÍSTRESE PARA OBTENER ACCESO.</p>
 
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="isFamilia" checked (change)="onItemChange($event.target.value)">
@@ -23,16 +23,345 @@
           </label>
         </div>
 
-        <form [formGroup]="valForm" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
+
+
+
+
+        <form  [formGroup]="valFormOrganizacion" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
+        (submit)="submitForm($event, valFormOrganizacion.value)" *ngIf="!isFamilia">
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Nombre de la Organización</label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="text" name="nombreOrganizacion"
+                placeholder="Nombre de la Organización" autocomplete="off" formControlName="nombreOrganizacion" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-users"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valFormOrganizacion.controls['nombreOrganizacion'].hasError('required') && (valFormOrganizacion.controls['nombreOrganizacion'].dirty || valForm.controls['nombreOrganizacion'].touched)">
+              Este dato es requerido.</div>
+            <div class="text-danger"
+              *ngIf="valFormOrganizacion.controls['nombreOrganizacion'].hasError('pattern') && (valFormOrganizacion.controls['nombreOrganizacion'].dirty || valForm.controls['nombreOrganizacion'].touched)">
+              Ingrese el nombre sin caracteres especiales.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Tipo de Organización</label>
+            <div class="input-group with-focus">
+              <select class="custom-select custom-select-sm form-control" formControlName="tipoOrganizacion">
+                <option value="" selected hidden disabled>Seleccione el tipo</option>
+                <option *ngFor="let tipo of tiposOrganizacion" >{{tipo.nom}}</option>
+              </select>
+            </div>
+            <div class="text-danger"
+            *ngIf="valForm.controls['tipoOrganizacion'].hasError('required') && (valForm.controls['tipoOrganizacion'].dirty || valForm.controls['tipoOrganizacion'].touched)">
+            Este dato es requerido.</div>
+            
+            
+          </div>
+
+          
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Nombre del Representante</label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="text" name="nombreRepresentante"
+                placeholder="Nombre del representante" autocomplete="off" formControlName="nombreRepresentante" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-user-tie"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['nombreRepresentante'].hasError('required') && (valForm.controls['nombreRepresentante'].dirty || valForm.controls['nombreRepresentante'].touched)">
+              Este dato es requerido.</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['nombreRepresentante'].hasError('pattern') && (valForm.controls['nombreRepresentante'].dirty || valForm.controls['nombreRepresentante'].touched)">
+              Ingrese el nombre sin caracteres especiales.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="text-muted mb-1">N° de DNI del Representante </label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="number" name="dni" placeholder="DNI"
+                autocomplete="off" formControlName="dni" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-address-card"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['dni'].hasError('required') && (valForm.controls['dni'].dirty || valForm.controls['dni'].touched)">
+              Ingrese un número de DNI válido.</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['dni'].hasError('pattern') && (valForm.controls['dni'].dirty || valForm.controls['dni'].touched)">
+              Ingrese un número de DNI válido.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Teléfono</label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="number" name="telefonoOrganizacion" placeholder="Celular o Fijo"
+                autocomplete="off" formControlName="telefonoOrganizacion" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-phone"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['telefonoOrganizacion'].hasError('required') && (valForm.controls['telefonoOrganizacion'].dirty || valForm.controls['telefonoOrganizacion'].touched)">
+              Ingrese un número de teléfono válido.</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['telefonoOrganizacion'].hasError('pattern') && (valForm.controls['telefonoOrganizacion'].dirty || valForm.controls['telefonoOrganizacion'].touched)">
+              Ingrese un número de teléfono válido.
+            </div>
+          </div>
+
+
+
+
+          <div class="form-group">
+          <label class="text-muted mb-1">Dirección de correo electrónico</label>
+            <div class="input-group with-focus">
+              
+              <input class="form-control border-right-0" type="email" name="account_email"
+                placeholder="Dirección de correo electrónico" autocomplete="off" formControlName="email" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-envelope"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['email'].hasError('required') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">
+              Este Campo es requerido</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">
+              Ingrese una dirección de correo electrónico válida</div>
+          </div>
+
+          <div formGroupName="passwordGroup">
+            <div class="form-group">
+              <label class="text-muted mb-1">Contraseña</label>
+              <div class="input-group with-focus">
+                <input class="form-control border-right-0" id="id-password" type="password" name="password"
+                  formControlName="password" [formControl]="valForm.get('passwordGroup.password')" />
+                <div class="input-group-append">
+                  <span class="input-group-text text-muted bg-transparent border-left-0">
+                    <em class="fa fa-lock"></em>
+                  </span>
+                </div>
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.password').hasError('required') && (valForm.get('passwordGroup.password').dirty || valForm.get('passwordGroup.password').touched)">
+                Este campo es requerido
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.password').hasError('pattern') && (valForm.get('passwordGroup.password').dirty || valForm.get('passwordGroup.password').touched)">
+                La contraseña debe tener una longitud de 6-10 y no debe tener caracteres especiales</div>
+            </div>
+            <div class="form-group">
+              <label class="text-muted mb-1">Repita la Contraseña</label>
+              <div class="input-group with-focus">
+                <input class="form-control border-right-0" type="password" name="confirmPassword"
+                  formControlName="confirmPassword" [formControl]="valForm.get('passwordGroup.confirmPassword')" />
+                <div class="input-group-append">
+                  <span class="input-group-text text-muted bg-transparent border-left-0">
+                    <em class="fa fa-lock"></em>
+                  </span>
+                </div>
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.confirmPassword').hasError('required') && (valForm.get('passwordGroup.confirmPassword').dirty || valForm.get('passwordGroup.confirmPassword').touched)">
+                Este campo es requerido</div>
+              <div class="text-danger" *ngIf="valForm.get('passwordGroup.confirmPassword').hasError('equalTo')">
+                La Contraseña no coincide</div>
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <div class="checkbox c-checkbox float-left mt0">
+              <label>
+                <input type="checkbox" required="" name="account_agreed" formControlName="accountagreed" />
+                <span class="fa fa-check"></span>Estoy de acuerdo con los
+                <a href="#">términos y condiciones</a>
+              </label>
+            </div>
+          </div>
+
+          <span class="text-danger"
+            *ngIf="valForm.controls['accountagreed'].hasError('required') && (valForm.controls['accountagreed'].dirty || valForm.controls['accountagreed'].touched)">
+            Usted debe aceptar los términos y condiciones</span>
+
+
+          <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
+
+      
+      
+      
+        </form>
+        <!-- END REGISTER ORGANIZACION -->
+        
+        <!-- BEGIN REGISTER FAMILIA -->
+
+
+
+        <form  [formGroup]="valFormFamilia" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
+        (submit)="submitForm($event, valFormFamilia.value)" *ngIf="isFamilia">
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Nombre de la Familia</label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="text" name="apellidoFamilia"
+                placeholder="Nombre de la Familia" autocomplete="off" formControlName="apellidoFamilia" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-user"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['apellidoFamilia'].hasError('required') && (valForm.controls['apellidoFamilia'].dirty || valForm.controls['apellidoFamilia'].touched)">
+              Este dato es requerido.</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['apellidoFamilia'].hasError('pattern') && (valForm.controls['apellidoFamilia'].dirty || valForm.controls['apellidoFamilia'].touched)">
+              Ingrese el nombre sin caracteres especiales.
+            </div>
+          </div>
+
+
+
+
+          <div class="form-group">
+            <label class="text-muted mb-1">Teléfono</label>
+            <div class="input-group with-focus">
+              <input class="form-control border-right-0" type="number" name="telefonoFamilia" placeholder="Celular o Fijo"
+                autocomplete="off" formControlName="telefonoFamilia" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-phone"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['telefonoFamilia'].hasError('required') && (valForm.controls['telefonoFamilia'].dirty || valForm.controls['telefonoFamilia'].touched)">
+              Ingrese un número de teléfono válido.</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['telefonoFamilia'].hasError('pattern') && (valForm.controls['telefonoFamilia'].dirty || valForm.controls['telefonoFamilia'].touched)">
+              Ingrese un número de teléfono válido.
+            </div>
+          </div>
+
+
+
+
+          <div class="form-group">
+          <label class="text-muted mb-1">Dirección de correo electrónico</label>
+            <div class="input-group with-focus">
+              
+              <input class="form-control border-right-0" type="email" name="account_email"
+                placeholder="Dirección de correo electrónico" autocomplete="off" formControlName="email" required="" />
+              <div class="input-group-append">
+                <span class="input-group-text text-muted bg-transparent border-left-0">
+                  <em class="fa fa-envelope"></em>
+                </span>
+              </div>
+            </div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['email'].hasError('required') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">
+              Este Campo es requerido</div>
+            <div class="text-danger"
+              *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">
+              Ingrese una dirección de correo electrónico válida</div>
+          </div>
+
+          <div formGroupName="passwordGroup">
+            <div class="form-group">
+              <label class="text-muted mb-1">Contraseña</label>
+              <div class="input-group with-focus">
+                <input class="form-control border-right-0" id="id-password" type="password" name="password"
+                  formControlName="password" [formControl]="valForm.get('passwordGroup.password')" />
+                <div class="input-group-append">
+                  <span class="input-group-text text-muted bg-transparent border-left-0">
+                    <em class="fa fa-lock"></em>
+                  </span>
+                </div>
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.password').hasError('required') && (valForm.get('passwordGroup.password').dirty || valForm.get('passwordGroup.password').touched)">
+                Este campo es requerido
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.password').hasError('pattern') && (valForm.get('passwordGroup.password').dirty || valForm.get('passwordGroup.password').touched)">
+                La contraseña debe tener una longitud de 6-10 y no debe tener caracteres especiales</div>
+            </div>
+            <div class="form-group">
+              <label class="text-muted mb-1">Repita la Contraseña</label>
+              <div class="input-group with-focus">
+                <input class="form-control border-right-0" type="password" name="confirmPassword"
+                  formControlName="confirmPassword" [formControl]="valForm.get('passwordGroup.confirmPassword')" />
+                <div class="input-group-append">
+                  <span class="input-group-text text-muted bg-transparent border-left-0">
+                    <em class="fa fa-lock"></em>
+                  </span>
+                </div>
+              </div>
+              <div class="text-danger"
+                *ngIf="valForm.get('passwordGroup.confirmPassword').hasError('required') && (valForm.get('passwordGroup.confirmPassword').dirty || valForm.get('passwordGroup.confirmPassword').touched)">
+                Este campo es requerido</div>
+              <div class="text-danger" *ngIf="valForm.get('passwordGroup.confirmPassword').hasError('equalTo')">
+                La Contraseña no coincide</div>
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <div class="checkbox c-checkbox float-left mt0">
+              <label>
+                <input type="checkbox" required="" name="account_agreed" formControlName="accountagreed" />
+                <span class="fa fa-check"></span>Estoy de acuerdo con los
+                <a href="#">términos y condiciones</a>
+              </label>
+            </div>
+          </div>
+
+          <span class="text-danger"
+            *ngIf="valForm.controls['accountagreed'].hasError('required') && (valForm.controls['accountagreed'].dirty || valForm.controls['accountagreed'].touched)">
+            Usted debe aceptar los términos y condiciones</span>
+
+
+          <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
+
+      
+      
+      
+        </form>
+
+
+
+
+
+        <!-- END REGISTER FAMILIA -->
+
+        <!-- <form [formGroup]="valForm" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
           (submit)="submitForm($event, valForm.value)">
 
           <div class="form-group">
             
             <div class="form-group" *ngIf="!isFamilia">
-              <label class="text-muted mb-1">Nombre de la Organizacion</label>
+              <label class="text-muted mb-1">Nombre de la Organización</label>
               <div class="input-group with-focus">
-                <input class="form-control border-right-0" type="email" name="account_email"
-                  placeholder="Nombre de la Organización" autocomplete="off" formControlName="email" required="" />
+                <input class="form-control border-right-0" type="text" name="nombreOrganizacion"
+                  placeholder="Nombre de la Organización" autocomplete="off" formControlName="nombreOrganizacion" required="" />
                 <div class="input-group-append">
                   <span class="input-group-text text-muted bg-transparent border-left-0">
                     <em class="fa fa-user"></em>
@@ -82,7 +411,7 @@
                   autocomplete="off" formControlName="email" required="" />
                 <div class="input-group-append">
                   <span class="input-group-text text-muted bg-transparent border-left-0">
-                    <!-- <em class="fa fa-user"></em> -->
+                     <em class="fa fa-user"></em> 
                   </span>
                 </div>
               </div>
@@ -103,7 +432,7 @@
                   autocomplete="off" formControlName="email" required="" />
                 <div class="input-group-append">
                   <span class="input-group-text text-muted bg-transparent border-left-0">
-                    <!-- <em class="fa fa-user"></em> -->
+                    <em class="fa fa-user"></em>
                   </span>
                 </div>
               </div>
@@ -208,8 +537,10 @@
           <span class="text-danger"
             *ngIf="valForm.controls['accountagreed'].hasError('required') && (valForm.controls['accountagreed'].dirty || valForm.controls['accountagreed'].touched)">
             Usted debe aceptar los términos</span>
-          <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
 
+
+          <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
+          -->
 
           
 
@@ -241,10 +572,10 @@
 
 
 
-        </form>
+        <!-- </form> -->
         <!-- <div class="alert alert-danger text-center"></div> -->
-        <p class="pt-3 text-center">¿Tener una cuenta?</p>
-        <a class="btn btn-block btn-secondary" [routerLink]="'/login'">Regístrate</a>
+        <p class="pt-3 text-center">¿Ya tiene una cuenta?</p>
+        <a class="btn btn-block btn-secondary" [routerLink]="'/login'">Inicie sesión aquí.</a>
       </div>
     </div>
     <!-- END card-->
