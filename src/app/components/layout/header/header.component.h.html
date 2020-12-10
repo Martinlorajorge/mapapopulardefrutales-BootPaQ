@@ -4,19 +4,19 @@
   <div class="navbar-header">
     <a class="navbar-brand" href="#/">
       <div class="brand-logo">
-        <img class="img-fluid" src="assets/img/logo.png" style="width: 150px;" alt="App Logo" />
+        <img class="img-fluid" src="assets/img/logo.png" style="width: 100px;" alt="App Logo" />
       </div>
       <div class="brand-logo-collapsed">
-        <img class="img-fluid" src="assets/img/logo-single.png" style="width: 150px;" alt="App Logo" />
+        <img class="img-fluid" src="assets/img/logo-single.png" style="width: 250px;" alt="App Logo" />
       </div>
     </a>
-    <button class="navbar-toggler" type="button" (click)="navCollapsed = !navCollapsed; $event.stopPropagation()">
+    <button class="navbar-toggler p-3" type="button" (click)="navCollapsed = !navCollapsed; $event.stopPropagation()">
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
   <!-- END navbar header-->
   <!-- START Nav wrapper-->
-  <div class="navbar-collapse collapse" [collapse]="navCollapsed">
+  <div class="navbar-collapse collapse mt-auto" [collapse]="navCollapsed">
     <!-- Navbar Menu -->
     <ul class="nav navbar-nav mr-auto flex-column flex-lg-row">
       <ng-template ngFor let-item [ngForOf]="menuItems">

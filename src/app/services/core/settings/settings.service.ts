@@ -20,7 +20,7 @@ export class SettingsService {
         // App Settings
         // -----------------------------------
         this.app = {
-            name: 'Mapa Popular de Frutales',
+            name: 'frumappa',
             description: '¡La web app para bendecir a otros!',
             year: ((new Date()).getFullYear())
         };
