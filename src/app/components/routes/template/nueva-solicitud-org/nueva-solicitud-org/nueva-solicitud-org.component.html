@@ -1,65 +1,64 @@
-<div class="container animated fast">
-    <div class="nuevoa text-center w-100 pt-2 pb-2">
-      <h2 class="text-light">
-        Nueva solicitud
-      </h2>
-    </div>
-  
-    <div class="row animated fast fadeIn mt-3">
-      <div class="col-12">
-  
-        <select *ngIf="recolectores" class="custom-select custom-select-lg mb-3" [(ngModel)]="recolectorSelect">
-          <option selected hidden disabled>Seleccione un Recolector</option>
-          <option *ngFor="let recolector of recolectores" [value]="recolector.dni">{{recolector.nomyape}}</option>
-        </select>
-  
-      </div>
-    </div>
-  
-  
-  
-  
-    <!-- SOLICITUD VISTA DESDE ORGANIZACION -->
-  
-    
-    <!-- aqui hay que poer la card Detalleorganizacion -->
-    <div class=" w-100  animated fast fadeIn">
-        <ng-container *ngIf="arbol&&familia">
-            <div class="card border-success mb-3 mr-auto ml-auto " style="max-width: 540px;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="{{arbol.galeria}}" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-success">
-                    <h5 class="card-title">{{arbol.nom_especie}}</h5>
-                    <p class="card-text">Familia: {{familia.nombre}}</p>
-                    <p class="card-text">Direccion: {{arbol.direccion}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ng-container>
+<div class="container animated fast mt-3">
+  <div class="nuevoa text-center w-100 pt-2 pb-2">
+    <h2 class="text-light">
+      Nueva solicitud
+    </h2>
+  </div>
 
-          <div class="row animated fadeIn">
+  <div class="row animated fast fadeIn mt-3">
+    <div class="col-12">
 
-            <div class="col-6">
-              <div class="text-center mt-3 mb-3">
-                <a href="/#/mapa-arboles" class="btn btn-danger btn-xs py-2 px-4">Cancelar</a>
-              </div>
-        
-            </div>
-        
-        
-            <div class="col-6">
-              <div class="text-center mt-3 mb-3">
-                <a
-                  class="btn btn-success btn-xs py-2 px-4" (click)="pedirDonacion()">Confirmar</a>
-              </div>
-            </div>
-        
+      <select *ngIf="recolectores" class="custom-select custom-select-lg mb-3" [(ngModel)]="recolectorSelect">
+        <option selected hidden disabled>Seleccione un Recolector</option>
+        <option *ngFor="let recolector of recolectores" [value]="recolector.dni">{{recolector.nomyape}}</option>
+      </select>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- SOLICITUD VISTA DESDE ORGANIZACION -->
+
+
+  <!-- aqui hay que poer la card Detalleorganizacion -->
+  <div class=" w-100  animated fast fadeIn">
+    <ng-container *ngIf="arbol&&familia">
+      <div class="card border-success mb-3 mr-auto ml-auto " style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{arbol.galeria}}" class="card-img" alt="...">
           </div>
-          
-  
-  
+          <div class="col-md-8">
+            <div class="card-body text-success">
+              <h5 class="card-title">{{arbol.nom_especie}}</h5>
+              <p class="card-text">Familia: {{familia.nombre}}</p>
+              <p class="card-text">Direccion: {{arbol.direccion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="row animated fadeIn">
+
+      <div class="col-6">
+        <div class="text-center mt-3 mb-3">
+          <a href="/#/mapa-arboles" class="btn btn-danger btn-xs py-2 px-4">Cancelar</a>
+        </div>
+
+      </div>
+
+
+      <div class="col-6">
+        <div class="text-center mt-3 mb-3">
+          <a class="btn btn-success btn-xs py-2 px-4" (click)="pedirDonacion()">Confirmar</a>
+        </div>
+      </div>
+
     </div>
+
+
+
+  </div>

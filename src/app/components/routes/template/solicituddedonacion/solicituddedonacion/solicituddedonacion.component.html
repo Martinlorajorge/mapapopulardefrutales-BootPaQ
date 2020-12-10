@@ -1,4 +1,4 @@
-<div class="container-home animated fast fadeIn">
+<div class="container-home animated fast fadeIn mt-3">
 
   <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
     <h1 class="text-light">
@@ -22,7 +22,7 @@
       </div>
     </ng-container>
   </div>
-<!-- NUEVA SOLICITUD VISTA DESDE FAMILIA -->
+  <!-- NUEVA SOLICITUD VISTA DESDE FAMILIA -->
 
   <div class="row ml-auto mr-auto mb-3 animated fast" style="max-width: 90%;">
 
@@ -31,7 +31,7 @@
 
       <select name="seleccionOrganizacion" class="custom-select custom-select-lg mb-3" [(ngModel)]="organizacionSelect">
         <option hidden selected>Organización</option>
-        <option  *ngFor="let org of organizaciones" [value]="org.id">{{org.nombre}}</option>
+        <option *ngFor="let org of organizaciones" [value]="org.id">{{org.nombre}}</option>
       </select>
     </div>
 
