@@ -1,4 +1,4 @@
-<div class="card border-success mr-auto ml-auto mt-3 mb-3" style="width: 90%;" (click)="iraConfirmar()">
+<div class="card border-success mr-auto ml-auto mt-3 mb-3 " style="width: 90%;">
   <div class="row no-gutters">
     <!-- <div class="col-md-4">
       <img src="..." class="card-img" alt="...">
@@ -14,5 +14,7 @@
     </div>
   </div>
   <!-- <a [routerLink]="['/peticion']" routerLinkActive="router-link-active" class="text-right">Ver mas...</a> -->
-  <a class="text-right">Ver mas...</a>
+  <a class="text-right" (click)="iraConfirmar()">
+    Ver más ...
+  </a>
 </div>
