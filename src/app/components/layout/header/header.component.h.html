@@ -1,17 +1,17 @@
 <!-- START Top Navbar-->
-<nav class="navbar topnavbar navbar-expand-lg navbar-light" role="navigation">
+<nav class="navbar topnavbar navbar-expand-lg navbar-success" role="navigation">
   <!-- START navbar header-->
   <div class="navbar-header">
     <a class="navbar-brand" href="#/">
       <div class="brand-logo">
-        <img class="img-fluid" src="assets/img/logo.png" style="width: 100px;" alt="App Logo" />
+        <img class="img-fluid" src="assets/img/logo.png" style="height: 50px;" alt="App Logo" />
       </div>
       <div class="brand-logo-collapsed">
         <img class="img-fluid" src="assets/img/logo-single.png" style="width: 250px;" alt="App Logo" />
       </div>
     </a>
     <button class="navbar-toggler p-3" type="button" (click)="navCollapsed = !navCollapsed; $event.stopPropagation()">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon fa-2x"></span>
     </button>
   </div>
   <!-- END navbar header-->
@@ -61,18 +61,18 @@
       <!-- Fullscreen (only desktops)-->
       <li class="nav-item d-none d-md-block">
         <a class="nav-link" #fsbutton (click)="toggleFullScreen($event)">
-          <em class="fa fa-expand"></em>
+          <em class="fa fa-expand fa-2x"></em>
         </a>
       </li>
       <!-- START Alert menu-->
       <li class="nav-item dropdown dropdown-list" dropdown>
         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" dropdownToggle>
-          <em class="icon-bell"></em>
+          <em class="icon-bell fa-2x"></em>
           <span class="badge badge-danger">99</span>
         </a>
         <!-- START Dropdown menu-->
         <div *dropdownMenu class="dropdown-menu dropdown-menu-right animated flipInX">
-          <div class="dropdown-item">
+          <div class="dropdown-item fa-2x mt-5">
             <!-- START list group-->
             <div class="list-group">
               <!-- list item-->

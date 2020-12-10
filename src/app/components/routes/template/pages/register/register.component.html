@@ -1,8 +1,8 @@
 <div class="wrapper">
-  <div class="block-center">
+  <div class="block-center  mt-4 wd-xl">
     <!-- START card-->
     <div class="card card-flat">
-      <div class="card-header text-center bg-dark">
+      <div class="card-header text-center bg-success">
         <a href="#">
           <img class="block-center rounded" src="assets/img/logo.png" alt="Image" />
         </a>
@@ -11,13 +11,15 @@
         <p class="text-center py-2">REGÍSTRESE PARA OBTENER ACCESO.</p>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="isFamilia" checked (change)="onItemChange($event.target.value)">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="isFamilia"
+            checked (change)="onItemChange($event.target.value)">
           <label class="form-check-label" for="exampleRadios1">
             Familia.
           </label>
         </div>
         <div class="form-check mb-3">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="isOrganizacion" (change)="onItemChange($event.target.value)">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="isOrganizacion"
+            (change)="onItemChange($event.target.value)">
           <label class="form-check-label" for="exampleRadios2">
             Organización.
           </label>
@@ -27,14 +29,15 @@
 
 
 
-        <form  [formGroup]="valFormOrganizacion" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
-        (submit)="submitForm($event, valFormOrganizacion.value)" *ngIf="!isFamilia">
+        <form [formGroup]="valFormOrganizacion" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
+          (submit)="submitForm($event, valFormOrganizacion.value)" *ngIf="!isFamilia">
 
           <div class="form-group">
             <label class="text-muted mb-1">Nombre de la Organización</label>
             <div class="input-group with-focus">
               <input class="form-control border-right-0" type="text" name="nombreOrganizacion"
-                placeholder="Nombre de la Organización" autocomplete="off" formControlName="nombreOrganizacion" required="" />
+                placeholder="Nombre de la Organización" autocomplete="off" formControlName="nombreOrganizacion"
+                required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-users"></em>
@@ -55,23 +58,24 @@
             <div class="input-group with-focus">
               <select class="custom-select custom-select-sm form-control" formControlName="tipoOrganizacion">
                 <option value="" selected hidden disabled>Seleccione el tipo</option>
-                <option *ngFor="let tipo of tiposOrganizacion" >{{tipo.nom}}</option>
+                <option *ngFor="let tipo of tiposOrganizacion">{{tipo.nom}}</option>
               </select>
             </div>
             <div class="text-danger"
-            *ngIf="valForm.controls['tipoOrganizacion'].hasError('required') && (valForm.controls['tipoOrganizacion'].dirty || valForm.controls['tipoOrganizacion'].touched)">
-            Este dato es requerido.</div>
-            
-            
+              *ngIf="valForm.controls['tipoOrganizacion'].hasError('required') && (valForm.controls['tipoOrganizacion'].dirty || valForm.controls['tipoOrganizacion'].touched)">
+              Este dato es requerido.</div>
+
+
           </div>
 
-          
+
 
           <div class="form-group">
             <label class="text-muted mb-1">Nombre del Representante</label>
             <div class="input-group with-focus">
               <input class="form-control border-right-0" type="text" name="nombreRepresentante"
-                placeholder="Nombre del representante" autocomplete="off" formControlName="nombreRepresentante" required="" />
+                placeholder="Nombre del representante" autocomplete="off" formControlName="nombreRepresentante"
+                required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-user-tie"></em>
@@ -90,8 +94,8 @@
           <div class="form-group">
             <label class="text-muted mb-1">N° de DNI del Representante </label>
             <div class="input-group with-focus">
-              <input class="form-control border-right-0" type="number" name="dni" placeholder="DNI"
-                autocomplete="off" formControlName="dni" required="" />
+              <input class="form-control border-right-0" type="number" name="dni" placeholder="DNI" autocomplete="off"
+                formControlName="dni" required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-address-card"></em>
@@ -110,8 +114,8 @@
           <div class="form-group">
             <label class="text-muted mb-1">Teléfono</label>
             <div class="input-group with-focus">
-              <input class="form-control border-right-0" type="number" name="telefonoOrganizacion" placeholder="Celular o Fijo"
-                autocomplete="off" formControlName="telefonoOrganizacion" required="" />
+              <input class="form-control border-right-0" type="number" name="telefonoOrganizacion"
+                placeholder="Celular o Fijo" autocomplete="off" formControlName="telefonoOrganizacion" required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-phone"></em>
@@ -131,9 +135,9 @@
 
 
           <div class="form-group">
-          <label class="text-muted mb-1">Dirección de correo electrónico</label>
+            <label class="text-muted mb-1">Dirección de correo electrónico</label>
             <div class="input-group with-focus">
-              
+
               <input class="form-control border-right-0" type="email" name="account_email"
                 placeholder="Dirección de correo electrónico" autocomplete="off" formControlName="email" required="" />
               <div class="input-group-append">
@@ -206,18 +210,18 @@
 
           <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
 
-      
-      
-      
+
+
+
         </form>
         <!-- END REGISTER ORGANIZACION -->
-        
+
         <!-- BEGIN REGISTER FAMILIA -->
 
 
 
-        <form  [formGroup]="valFormFamilia" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
-        (submit)="submitForm($event, valFormFamilia.value)" *ngIf="isFamilia">
+        <form [formGroup]="valFormFamilia" class="form-validate mb-3" role="form" name="registerForm" novalidate=""
+          (submit)="submitForm($event, valFormFamilia.value)" *ngIf="isFamilia">
 
           <div class="form-group">
             <label class="text-muted mb-1">Nombre de la Familia</label>
@@ -245,8 +249,8 @@
           <div class="form-group">
             <label class="text-muted mb-1">Teléfono</label>
             <div class="input-group with-focus">
-              <input class="form-control border-right-0" type="number" name="telefonoFamilia" placeholder="Celular o Fijo"
-                autocomplete="off" formControlName="telefonoFamilia" required="" />
+              <input class="form-control border-right-0" type="number" name="telefonoFamilia"
+                placeholder="Celular o Fijo" autocomplete="off" formControlName="telefonoFamilia" required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-phone"></em>
@@ -266,9 +270,9 @@
 
 
           <div class="form-group">
-          <label class="text-muted mb-1">Dirección de correo electrónico</label>
+            <label class="text-muted mb-1">Dirección de correo electrónico</label>
             <div class="input-group with-focus">
-              
+
               <input class="form-control border-right-0" type="email" name="account_email"
                 placeholder="Dirección de correo electrónico" autocomplete="off" formControlName="email" required="" />
               <div class="input-group-append">
@@ -339,11 +343,11 @@
             Usted debe aceptar los términos y condiciones</span>
 
 
-          <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
+          <button class="btn btn-block btn-success mt-3 mb-3" type="submit">Crear Cuenta</button>
 
-      
-      
-      
+
+
+
         </form>
 
 
@@ -542,13 +546,13 @@
           <button class="btn btn-block btn-primary mt-3 mb-3" type="submit">Crear Cuenta</button>
           -->
 
-          
 
 
 
 
-          
-<!-- 
+
+
+        <!-- 
           <label class="text-muted mb-1" *ngIf="!isFamilia">Dirección de correo electrónico
           </label >
           <div class="input-group with-focus">
@@ -568,7 +572,7 @@
             Este campo debe ser una dirección de correo electrónico válida</div> -->
 
 
-          
+
 
 
 
