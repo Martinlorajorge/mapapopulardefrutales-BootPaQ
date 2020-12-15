@@ -1,39 +1,40 @@
-<div class="container-home animated fast">
+<div class="container-home animated fast mt-3">
 
-  <div class="nuevoa animated fast fadeIn text-center w-100 pt-2 pb-2">
+  <div class="nuevoa animated fast fadeIn text-center w-100 pt-2 pb-2 mb-5">
     <h1 class="text-light">
       Mis Solicitudes
     </h1>
   </div>
 
+  <div class="animated fast fadeIn">
 
-  <h3 class="text-center mt-3">Confirmadas</h3>
 
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
+    <h3 class="btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Confirmadas</h3>
+
+    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesConfirmadas" [routerLink]="['/mis-solicitudes/confirmada/',solicitud.id]">
+      <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
+    </div>
+
+    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Solicitudes de
+      Organizaciones</h3>
+
+    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesDeOrganizaciones" [routerLink]="['/mis-solicitudes/de-organizacion/',solicitud.id]">
+      <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
+    </div>
+
+    <h3 class=" btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
+      Pendiente de
+      confirmación del
+      recolector
+    </h3>
+
+
+  </div>
+
+  <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesPendientes" [routerLink]="['/mis-solicitudes/a-confirmar/',solicitud.id]">
     <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
   </div>
-
-
-
-
-  <h3 class="text-center mt-3">Solicitudes de Organizaciones</h3>
-
-
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeOrganizaciones">
-    <app-cardsolicitud-de-organizacion [solicitud]="solicitud"></app-cardsolicitud-de-organizacion>
-  </div>
-
-
-
-  <h3 class="text-center mt-3 animated fast fadeIn">Pendiente de confirmación del recolector</h3>
-
-
-  <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesPendientes">
-    <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
-  </div>
-
-
-
-
 
 </div>

@@ -1,9 +1,10 @@
 export interface Arbol {
     id?:number;
-    imagen?:string;
-    nombre?:string;
+    galeria?:string;
+    nom_especie?:string;
     cosechable?:boolean;
     direccion?:string;
     lat?:number;
     lng?:number;
+    id_familia?:number;
 }

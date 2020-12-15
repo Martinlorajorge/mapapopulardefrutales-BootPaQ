@@ -15,7 +15,7 @@ export class ArbolComponent implements OnInit {
   ngOnInit(): void {
   }
   public nuevaSolicitud(){
-    this.router.navigate(['/solicitud/'+this.arbol.id]);
+    this.router.navigate(['/mis-arboles/nuevasolicitud/'+this.arbol.id]);//+this.arbol.id
   }
 
 }

@@ -6,13 +6,24 @@ import { CommonModule } from '@angular/common';
 
 import { ArbolModule } from '../components/arbol/arbol.module';
 import { NuevoarbolModule } from '../nuevoarbol/nuevoarbol.module';
+import { NuevoarbolComponent } from '../nuevoarbol/nuevoarbol/nuevoarbol.component';
+import { SolicituddedonacionComponent } from '../solicituddedonacion/solicituddedonacion/solicituddedonacion.component';
 
 
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'nuevoarbol', component: NuevoarbolModule},
+    {
+        path: '', component: HomeComponent,
+        children:[
+            {
+                path: 'nuevoarbol', component: NuevoarbolComponent
+            },
+            {
+                 path: 'nuevasolicitud/:id', component: SolicituddedonacionComponent
+            },
+        ]   
+    }
 ];
 
 @NgModule({
@@ -21,6 +32,7 @@ const routes: Routes = [
         MaterialModule,
         ArbolModule,
         CommonModule,
+        
         RouterModule.forChild(routes)
     ],
     declarations: [

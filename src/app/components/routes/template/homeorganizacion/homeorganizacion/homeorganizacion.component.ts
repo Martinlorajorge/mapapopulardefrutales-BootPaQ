@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import { Solicitud } from 'src/app/interfaces/solicitud';
 import { SolicitudesService } from 'src/app/services/solicitudes/solicitudes.service';
 import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homeorganizacion',
@@ -13,24 +14,27 @@ export class HomeorganizacionComponent implements OnInit {
   public solicitudesConfirmadas: Array<Solicitud>;
   public solicitudesDeFamilias: Array<Solicitud>;
   public solicitudesPendientes: Array<Solicitud>;
-  constructor(private solicitudesService: SolicitudesService,private acordeonConfig:NgbAccordionConfig) { 
+  public solicitudes:Array<Solicitud>;
+  constructor(private solicitudesService: SolicitudesService,private acordeonConfig:NgbAccordionConfig, private route:Router) { 
     acordeonConfig.closeOthers=true;
   }
 
   ngOnInit() {
-      this.solicitudesService.findAllorgConfirmadas()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesConfirmadas = response;
+    this.solicitudes=[];
+    
+    this.solicitudesService.findAllSolicitudes()
+    .subscribe((response: Array<Solicitud>) => {
+    this.solicitudes = response;
+    this.divideSolicitudes();
   });
-  this.solicitudesService.findAllorgdeFamilias()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesDeFamilias = response;
-  });
-  this.solicitudesService.findAllorgPendientes()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesPendientes = response;
-  });
+    
+
 
   }
-
+  private divideSolicitudes(){
+    this.solicitudesConfirmadas=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == true));
+    this.solicitudesPendientes=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == false && solicitudes.acepta_org == true));
+    this.solicitudesDeFamilias=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == false));
+    console.log(this.solicitudesConfirmadas);
+  }
 }

@@ -1,4 +1,4 @@
-<div class="container-home animated fast">
+<div class="container-home animated fast mt-3">
 
   <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
     <h1 class="text-light">
@@ -15,7 +15,8 @@
       <form action="">
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control" id="exampleFormControlSelect1" required [(ngModel)]="arbol.nombre" name="nombre">
+          <select class="form-control" id="exampleFormControlSelect1" required [(ngModel)]="arbol.nom_especie"
+            name="nombre">
             <option selected>Seleccione un Arbol...</option>
             <option>Manzano</option>
             <option>Naranjo</option>
@@ -64,6 +65,12 @@
           Árbol...</label>
       </div>
 
+    </div>
+    <!-- o sube un link de alguna imagen -->
+    <div class="form-group animated fast fadeIn">
+      <label for="inputAddress"></label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Link o enlace web de una imagen del arbol"
+        required maxlength="100" minlength="1" [(ngModel)]="arbol.galeria">
     </div>
 
     <div class="text-center mt-3 mb-5 animated fast fadeIn">

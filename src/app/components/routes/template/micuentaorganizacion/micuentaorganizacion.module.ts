@@ -6,7 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-    { path: 'micuenta', component: MicuentaorganizacionComponent },
+    { path: '', component: MicuentaorganizacionComponent,
+    // children:[
+    //   {
+    //     path: 'nuevorecolector/:id', component: NuevorecolectorComponent
+    //   },
+    // ]
+  }
 ];
 
 
@@ -20,8 +26,8 @@ const routes: Routes = [
     CommonModule
   ],
   exports: [
-    RouterModule,
-    MicuentaorganizacionComponent
+    MicuentaorganizacionComponent,
+    RouterModule
   ]
 })
 export class MicuentaorganizacionModule { }

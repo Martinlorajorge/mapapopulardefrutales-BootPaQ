@@ -1,8 +1,9 @@
-<a class="btn btn-block " [routerLink]="['/organizacion']" routerLinkActive="router-link-active">
+<a *ngIf="organizacion" class="btn btn-block w-100 bg-success h-100"
+  [routerLink]="['/organizaciones/organizacion/',organizacion.id]" routerLinkActive="router-link-active">
   <div class="card text-white bg-success mb-3">
     <div class="card-body">
-      <h5 class="card-title">Organizacion ..........</h5>
-      <p class="card-text">Representante: ............</p>
+      <h5 class="card-title">Organización: {{organizacion.nombre}}</h5>
+      <p class="card-text">Representante: {{representante.nombre}}</p>
     </div>
   </div>
 </a>

@@ -6,7 +6,7 @@ import { FamiliacardModule } from '../components/familiacard/familiacard.module'
 
 
 const routes: Routes = [
-    { path: 'familia', component: FamiliaComponent },
+    
 ];
 
 

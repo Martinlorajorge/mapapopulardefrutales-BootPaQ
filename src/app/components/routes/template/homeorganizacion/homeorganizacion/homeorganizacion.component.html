@@ -1,4 +1,4 @@
-<div class="container-home animated fast">
+<div class="container-home animated fast mt-3">
   <div class="nuevoa animated fast fadeIn text-center w-100 pt-2 pb-2">
     <h1 class="text-light">
       Solicitudes
@@ -10,16 +10,17 @@
       <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
           <button ngbPanelToggle
-            class="btn btn-outline-success container-fluid text-center btn-block ">Confirmadas</button>
+            class="btn btn-outline-success container-fluid text-center btn-block ">Confirmadas por ambas partes</button>
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
-        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesConfirmadas">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesConfirmadas" [routerLink]="['/homeorganizacion/a-confirmar',solicitud.id]">
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
+
       <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
           <button ngbPanelToggle class="btn btn-outline-success container-fluid text-center btn-block ">Solicitudes de
@@ -27,21 +28,22 @@
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
-        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesDeFamilias">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesDeFamilias" [routerLink]="['/homeorganizacion/solicitud-recoleccion/',solicitud.id]">
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>
     <ngb-panel>
+
       <ng-template ngbPanelHeader class=" text-success border-success">
         <div class="d-flex align-items-center justify-content-between">
           <button ngbPanelToggle class="btn btn-outline-success container-fluid text-center btn-block ">Pendientes de
-            confirmación</button>
+            confirmación por parte de la Familia</button>
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
-        <div class="animated fast fadeIn" *ngFor="let solicitud of solicitudesPendientes">
-          <app-cardconforg [solicitud]="solicitud"></app-cardconforg>
+        <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesPendientes" [routerLink]="['/homeorganizacion/a-confirmar/',solicitud.id]">
+          <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
         </div>
       </ng-template>
     </ngb-panel>

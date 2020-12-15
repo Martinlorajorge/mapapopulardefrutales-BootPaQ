@@ -1,5 +1,20 @@
-<div class="animated fast fadeIn">
+<div class="container-home animated fast fadeIn mt-3">
 
-  <p>perfilorganizacion works!</p>
+  <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
+    <h1 class="text-light">
+      Perfil de Organizaciones
+    </h1>
+  </div>
+
+
+
+  <!-- AQUI TENDRIAS QUE PONER UN SHUFFLE PARA QUE CADA VEZ QUE SE RECARGUE LA PAG SE ORDENEN DE FORMA ALEATORIA LAS ORGANIZACIONES(CARDS) ASI NINGUNA TIENE EL PRIVILEGIO DE TENER SIEMPRE LA PRIMERA POSICION. -->
+
+  <div class=" animated fast mt-5">
+    <div class="w-75 mr-auto ml-auto" *ngFor="let organizacion of organizaciones">
+      <app-perfilorgcard [organizacion]="organizacion"></app-perfilorgcard>
+    </div>
+  </div>
+
 
 </div>

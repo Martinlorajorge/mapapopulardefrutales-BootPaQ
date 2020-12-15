@@ -6,6 +6,10 @@ import { HomeorganizacionComponent } from './homeorganizacion/homeorganizacion.c
 import { CardsolirecModule } from '../components/cardsolirec/cardsolirec.module';
 import { CardconforgModule } from '../components/cardconforg/cardconforg.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SolicitudconfirmadaComponent } from '../solicitudconfirmada/solicitudconfirmada/solicitudconfirmada.component';
+import { SolicitudrecoleccionComponent } from '../solicitudrecoleccion/solicitudrecoleccion/solicitudrecoleccion.component';
+import { CardsolicitudModule } from '../components/cardsolicitud/cardsolicitud.module';
+import { SolicitudrecoleccionModule} from '../solicitudrecoleccion/solicitudrecoleccion.module'
 
 
 
@@ -13,7 +17,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
-    { path: 'homeorganizacion', component: HomeorganizacionComponent },
+    { path: '', component: HomeorganizacionComponent,
+  children: [
+    {
+      path: 'a-confirmar/:id', component: SolicitudconfirmadaComponent
+    },
+    {
+      path: 'solicitud-recoleccion/:id', component: SolicitudrecoleccionComponent
+    }
+  ]
+  },
     { path: 'cardsolireg', component: CardsolirecModule },
     { path: 'cardconforg', component: CardconforgModule },
 ];
@@ -22,9 +35,11 @@ const routes: Routes = [
     imports: [
         CardsolirecModule,
         CardconforgModule,
+        CardsolicitudModule,
         MaterialModule,
         CommonModule,
         NgbModule,
+        SolicitudrecoleccionModule,
         RouterModule.forChild(routes)
     ],
     declarations: [

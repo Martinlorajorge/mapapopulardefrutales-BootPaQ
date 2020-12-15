@@ -15,6 +15,8 @@ import { RoutesModule } from './components/routes/routes.module';
 //ng-bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { OAuthModule } from 'angular-oauth2-oidc';
+
 // https://github.com/ocombe/ng2-translate/issues/218
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,6 +28,12 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     imports: [
         HttpClientModule,
+        OAuthModule.forRoot({
+            resourceServer: {
+                allowedUrls: ['http://localhost:8080/api'],//requestmapping
+                sendAccessToken: true
+            }
+        }),
         BrowserAnimationsModule, // required for ng2-tag-input
         CoreModule,
         LayoutModule,

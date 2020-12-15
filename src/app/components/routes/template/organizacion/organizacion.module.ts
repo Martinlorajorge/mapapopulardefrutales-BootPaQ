@@ -6,7 +6,7 @@ import { OrganizacioncardModule } from '../components/organizacioncard/organizac
 
 
 const routes: Routes = [
-    { path: 'organizacion', component: OrganizacionComponent },
+    { path: 'organizacion/:id', component: OrganizacionComponent },
 ];
 
 

@@ -1,4 +1,4 @@
-<div class="container-home animated fast fadeIn">
+<div class="container-home animated fast fadeIn mt-3">
 
   <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
     <h1 class="text-light">
@@ -8,9 +8,8 @@
 
 
 
-  <div class="col-10 ml-auto mr-auto my-3">
-    <a class="btn btn-outline-success btn-block" [routerLink]="['/nuevorecolector']"
-      routerLinkActive="router-link-active">Agregar Recolector</a>
+  <div class="col-10 ml-auto mr-auto my-3" (click)="nuevoRecolector()">
+    <a class="btn btn-outline-success btn-block">Agregar Recolector</a>
   </div>
 
 
@@ -18,9 +17,10 @@
   <div class="col-10 mr-auto ml-auto">
 
 
-    <a class="btn btn-block" [routerLink]="['/detallerecolector']" routerLinkActive="router-link-active">
+    <a class="btn btn-block bg-white border-success" *ngFor="let recolector of recolectores" [routerLink]="['/recolectores/detallerecolector',recolector.dni]"
+      routerLinkActive="router-link-active">
 
-      <app-cardrecolector></app-cardrecolector>
+      <app-cardrecolector [recolector]="recolector"></app-cardrecolector>
 
     </a>
 
@@ -35,3 +35,4 @@
 
 
 </div>
+<router-outlet></router-outlet>

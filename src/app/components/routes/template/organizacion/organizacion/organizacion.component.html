@@ -1,22 +1,22 @@
-<div class="container-home animated fast fadeIn">
+<div class="container-home animated fast fadeIn mt-3">
 
   <div class="nuevoa text-center w-100 pt-2 pb-2 animated fast">
     <h1 class="text-light">
-      Organizaciones
+      Organización
     </h1>
   </div>
 
   <div class="row animated fast">
     <div class="col-10 mr-auto ml-auto my-3">
-      <app-organizacioncard></app-organizacioncard>
+      <app-organizacioncard [organizacion]="organizacion"></app-organizacioncard>
     </div>
   </div>
 
 
 
-  <div class="row mt-3 animated fast">
+  <div class="row animated fast">
 
-    <div class="col-8 ml-auto mr-auto mt-3">
+    <div class="col-8 ml-auto mr-auto">
 
       <a type="sumit" class="btn btn-outline-primary btn-block" [routerLink]="['/organizaciones']"
         routerLinkActive="router-link-active">Volver</a>

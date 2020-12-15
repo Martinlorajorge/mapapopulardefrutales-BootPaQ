@@ -1,6 +1,6 @@
 const Home = {
     text: 'Mis Arboles',
-    link: '/home',
+    link: '/mis-arboles',
     icon: 'icon-home'
 };
 
@@ -32,7 +32,7 @@ const Home = {
 
 const MissolicitudesModule = {
     text: 'Mis Solicitudes',
-    link: '/misolicitud',
+    link: '/mis-solicitudes',
     icon: 'icon-note'
 };
 
@@ -464,15 +464,15 @@ const HomeorganizacionModule = {
 };
 
 
-const SolicitudrecoleccionModule = {
-    text: 'solicitud recoleccion',
-    link: '/solicitudrecoleccion',
-    icon: 'icon-home'
-};
+// const SolicitudrecoleccionModule = {
+//     text: 'solicitud recoleccion',
+//     link: '/solicitudrecoleccion',
+//     icon: 'icon-home'
+// };
 
 const MapaarbolesModule = {
     text: 'Mapa',
-    link: '/mapaarboles',
+    link: '/mapa-arboles',
     icon: 'icon-map'
 };
 
@@ -500,7 +500,7 @@ const FamiliasModule = {
 const OrganizacionesModule = {
     text: 'Organizaciones',
     link: '/organizaciones',
-    icon: 'icon-home'
+    icon: 'icon-tree'
 };
 
 
@@ -527,7 +527,7 @@ export const menu = [
     // Widgets,
     headingComponents,
     HomeorganizacionModule,
-    SolicitudrecoleccionModule,
+    // SolicitudrecoleccionModule,
     MapaarbolesModule,
     MicuentaorganizacionModule,
     RecolectoresModule,

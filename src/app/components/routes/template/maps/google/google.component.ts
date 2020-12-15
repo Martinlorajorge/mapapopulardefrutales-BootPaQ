@@ -79,7 +79,7 @@ export class GoogleComponent implements OnInit {
             window.alert('Geocoder failed due to: ' + status);
           }
     
-        });
+        }); 
       }
 
 }

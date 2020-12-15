@@ -1,24 +1,45 @@
-<div class="container-home animated fast fadeIn">
+<div class="container-home animated fast fadeIn mt-3">
 
   <div class="nuevoa text-center w-100 pt-2 pb-2">
-    <h1 class="text-light">
-      Mis Solicitudes
-    </h1>
+    <h3 class="text-light">
+      Solicitud de recolección
+    </h3>
   </div>
 
   <div class="container animated fast">
-    <p class="text-justify mt-3">Árbol:(nombre de arbol)...</p>
-    <p class="text-justify mt-3">Organizacion: (Nombre de la organizacion)</p>
-
-    <hr class="border-green">
 
 
 
-    <app-cardrecolector></app-cardrecolector>
+    <div class="card mb-3 mr-auto ml-auto mt-3" style="max-width: 90%;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{arbol.galeria}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{arbol.nom_especie}}</h5>
+            <p class="card-text">Organización: {{organizacion.nombre}}</p>
+
+            <p class="card-text">Recolector: {{recolector.nomyape}}</p>
+            <p class="card-text">DNI: {{recolector.dni}}</p>
+            <p class="card-text">Teléfono: {{recolector.num_contacto}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
   </div>
+  <!-- SOLICITUD VISTA DESDE FAMILIA -->
+
+
+
+  <!-- <app-cardrecolector></app-cardrecolector> -->
+
+
+
+
 
   <div class="row animated fadeIn">
 
@@ -32,12 +53,12 @@
 
     <div class="col-6">
       <div class="text-center mt-3 mb-3">
-        <a [routerLink]="['/solicitud']" routerLinkActive="router-link-active"
-          class="btn btn-success btn-xs py-2 px-4">Confirmar</a>
+        <a class="btn btn-success btn-xs py-2 px-4" (click)="confirmar()">Confirmar</a>
       </div>
     </div>
 
   </div>
 
-
 </div>
+
+<!-- <router-outlet></router-outlet> -->

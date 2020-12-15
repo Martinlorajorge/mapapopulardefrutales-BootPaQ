@@ -2,19 +2,21 @@
   <div class="block-center mt-4 wd-xl">
     <!-- START card-->
     <div class="card card-flat">
-      <div class="card-header text-center bg-dark">
+      <div class="card-header text-center bg-success">
         <a href="#">
           <img class="block-center rounded" src="assets/img/logo.png" alt="Image" />
         </a>
       </div>
       <div class="card-body">
-        <p class="text-center py-2">INICIA SESIÓN PARA CONTINUAR.</p>
+        <h5 class="text-center py-2">Inicia sesión para ver tu jardín</h5>
+        <div *ngIf="isLoginFail" class="alert alert-danger">{{errorMessage}}</div>
         <form [formGroup]="valForm" class="form-validate mb-3" role="form" name="loginForm" novalidate=""
           (submit)="submitForm($event, valForm.value)">
+
           <div class="form-group">
             <div class="input-group with-focus">
               <input class="form-control border-right-0" id="exampleInputEmail1" type="email" name="email"
-                placeholder="Ingrese su Correo" autocomplete="off" formControlName="email" required="" />
+                placeholder="Ingrese su Correo electrónico" autocomplete="off" formControlName="email" required="" />
               <div class="input-group-append">
                 <span class="input-group-text text-muted bg-transparent border-left-0">
                   <em class="fa fa-envelope"></em>
@@ -28,6 +30,7 @@
               *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">
               Este campo debe ser una dirección de correo electrónico válida</div>
           </div>
+
           <div class="form-group">
             <div class="input-group with-focus">
               <input class="form-control border-right-0" id="exampleInputPassword1" type="password" name="password"
@@ -54,11 +57,11 @@
               </a>
             </div>
           </div>
-          <button class="btn btn-block btn-primary mt-3" type="submit">Iniciar sesión
+          <button class="btn btn-block btn-success mt-2" type="submit">Iniciar sesión
           </button>
         </form>
         <!-- <div class="alert alert-danger text-center" ></div> -->
-        <p class="pt-3 text-center">¿Necesitas registrarte?
+        <p class="pt-1 text-center">¿No tienes una cuenta?
         </p>
         <a class="btn btn-block btn-secondary" [routerLink]="'/register'">Regístrate ahora
         </a>

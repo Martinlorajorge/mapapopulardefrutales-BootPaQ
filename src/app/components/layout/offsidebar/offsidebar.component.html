@@ -1,129 +1,130 @@
-<tabset [justified]="true">
-  <tab>
-    <ng-template tabHeading>
-      <em class="icon-equalizer fa-lg"></em>
-    </ng-template>
-    <h3 class="text-center text-thin mt-4" [innerHTML]="'offsidebar.setting.SETTINGS' | translate"></h3>
-    <div class="p-2">
-      <h4 class="text-muted text-thin">TEMA</h4>
-      <div class="row row-flush mb-2">
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="A" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-info"></span>
-                <span class="color bg-info"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
+<div class="mt-5">
+  <tabset class="mt-5" [justified]="true">
+    <tab class="mt-5">
+      <ng-template tabHeading>
+        <em class="icon-equalizer fa-lg fa-5x "></em>
+      </ng-template>
+      <h3 class="text-center text-thin " [innerHTML]="'offsidebar.setting.SETTINGS' | translate"></h3>
+      <div class="p-2">
+        <h4 class="text-muted text-thin">TEMA</h4>
+        <div class="row row-flush mb-2">
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="A" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-info"></span>
+                  <span class="color bg-info"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="B" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-primary"></span>
+                  <span class="color bg-primary"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="C" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-purple"></span>
+                  <span class="color bg-purple"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="D" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-success"></span>
+                  <span class="color bg-success"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
           </div>
         </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="B" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-primary"></span>
-                <span class="color bg-primary"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
+        <div class="row row-flush mb-2">
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="E" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-cyan-500"></span>
+                  <span class="color bg-cyan-500"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="C" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-purple"></span>
-                <span class="color bg-purple"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="F" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-pink-500"></span>
+                  <span class="color bg-pink-500"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="D" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-success"></span>
-                <span class="color bg-success"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="G" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-blue-grey-500"></span>
+                  <span class="color bg-blue-grey-500"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col mb-2">
+            <div class="setting-color">
+              <label>
+                <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
+                  value="H" />
+                <span class="icon-check"></span>
+                <span class="split">
+                  <span class="color bg-blue-grey-900"></span>
+                  <span class="color bg-blue-grey-900"></span>
+                </span>
+                <span class="color bg-white"></span>
+              </label>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row row-flush mb-2">
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="E" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-cyan-500"></span>
-                <span class="color bg-cyan-500"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
-          </div>
-        </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="F" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-pink-500"></span>
-                <span class="color bg-pink-500"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
-          </div>
-        </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="G" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-blue-grey-500"></span>
-                <span class="color bg-blue-grey-500"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
-          </div>
-        </div>
-        <div class="col mb-2">
-          <div class="setting-color">
-            <label>
-              <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()"
-                value="H" />
-              <span class="icon-check"></span>
-              <span class="split">
-                <span class="color bg-blue-grey-900"></span>
-                <span class="color bg-blue-grey-900"></span>
-              </span>
-              <span class="color bg-white"></span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- <div class="p-2">
+      <!-- <div class="p-2">
       <h4 class="text-muted text-thin">Layout</h4>
       <div class="clearfix">
         <p class="float-left">Fixed</p>
@@ -156,7 +157,7 @@
     </div>
 
     </div> -->
-    <!-- <div class="p-2" *ngIf="!settings.getLayoutSetting('horizontal')">
+      <!-- <div class="p-2" *ngIf="!settings.getLayoutSetting('horizontal')">
       <h4 class="text-muted text-thin">Aside</h4>
       <div class="clearfix">
         <p class="float-left">Collapsed</p>
@@ -217,19 +218,19 @@
         <option [value]="lang.code" *ngFor="let lang of getLangs()">{{lang.text}}</option>
       </select>
     </div> -->
-  </tab>
-  <!-- <tab>
+    </tab>
+    <!-- <tab>
     <ng-template tabHeading>
       <em class="icon-user fa-lg"></em>
     </ng-template>
     <h3 class="text-center text-thin mt-4">Connections</h3>
     <div class="list-group"> -->
-  <!-- START list title-->
-  <!-- <div class="list-group-item border-0">
+    <!-- START list title-->
+    <!-- <div class="list-group-item border-0">
         <small class="text-muted">ONLINE</small>
       </div> -->
-  <!-- END list title-->
-  <!-- <div class="list-group-item list-group-item-action border-0">
+    <!-- END list title-->
+    <!-- <div class="list-group-item list-group-item-action border-0">
         <div class="media">
           <img class="align-self-center mr-3 rounded-circle thumb48" src="assets/img/user/05.jpg" alt="Image">
           <div class="media-body text-truncate">
@@ -289,12 +290,12 @@
           </div>
         </div>
       </div> -->
-  <!-- START list title-->
-  <!-- <div class="list-group-item border-0">
+    <!-- START list title-->
+    <!-- <div class="list-group-item border-0">
         <small class="text-muted">OFFLINE</small>
       </div> -->
-  <!-- END list title-->
-  <!-- <div class="list-group-item list-group-item-action border-0">
+    <!-- END list title-->
+    <!-- <div class="list-group-item list-group-item-action border-0">
         <div class="media">
           <img class="align-self-center mr-3 rounded-circle thumb48" src="assets/img/user/09.jpg" alt="Image">
           <div class="media-body text-truncate">
@@ -326,13 +327,13 @@
       </div>
     </div>
     <div class="px-3 py-4 text-center"> -->
-  <!-- Optional link to list more users-->
-  <!-- <a class="btn btn-purple btn-sm" href="#" title="See more contacts">
+    <!-- Optional link to list more users-->
+    <!-- <a class="btn btn-purple btn-sm" href="#" title="See more contacts">
         <strong>Load more..</strong>
       </a>
     </div> -->
-  <!-- Extra items-->
-  <!-- <div class="px-3 py-2">
+    <!-- Extra items-->
+    <!-- <div class="px-3 py-2">
       <p>
         <small class="text-muted">Tasks completion</small>
       </p>
@@ -355,4 +356,5 @@
       </div>
     </div>
   </tab> -->
-</tabset>
+  </tabset>
+</div>

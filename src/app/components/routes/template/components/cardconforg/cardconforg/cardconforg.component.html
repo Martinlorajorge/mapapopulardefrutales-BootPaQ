@@ -3,16 +3,17 @@
 <!-- confirmadas y Pendientes son iguales, esta bien este componente, solicitud de organizacion se muestra distinto,-->
 <!-- asi que es un componente aparte, movi su css a cardsolicitud de organizacion -->
 
-<div class="card border-success mr-auto ml-auto mt-3 mb-3 " *ngFor="let arbol of solicitud.arboles" style="width: 90%;">
+<div class="card border-success mr-auto ml-auto mt-3 mb-3 puntero " *ngFor="let arbol of solicitud.arboles"
+  style="width: 90%;">
 
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src="{{arbol.imagen}}" class="card-img" alt="...">
+      <img src="{{arbol.galeria}}" class="card-img" alt="...">
     </div>
     <div class="col-8">
 
       <div class="card-body text-success">
-          <div class="card-title">{{arbol.nombre}}</div>
+        <div class="card-title">{{arbol.nombre}}</div>
         <br>
         <p class="card-text">{{solicitud.familia}}</p>
 

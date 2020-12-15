@@ -8,25 +8,26 @@ import { SolicitudesService } from 'src/app/services/solicitudes/solicitudes.ser
   styleUrls: ['./missolicitudes.component.scss']
 })
 export class MissolicitudesComponent implements OnInit {
-  public solicitudesConfirmadas: Array<Solicitud>;
-  public solicitudesDeOrganizaciones: Array<Solicitud>;
-  public solicitudesPendientes: Array<Solicitud>;
+  public solicitudes: Array<Solicitud>;
+  public solicitudesConfirmadas: Array<Solicitud>=[];
+  public solicitudesDeOrganizaciones: Array<Solicitud>=[];
+  public solicitudesPendientes: Array<Solicitud>=[];
   constructor(private solicitudesService: SolicitudesService) { }
 
   ngOnInit() {
-      this.solicitudesService.findAllConfirmadas()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesConfirmadas = response;
-  });
-  this.solicitudesService.findAlldeOrganizaciones()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesDeOrganizaciones = response;
-  });
-  this.solicitudesService.findAllPendientes()
-  .subscribe((response: Array<Solicitud>) => {
-    this.solicitudesPendientes = response;
+    this.solicitudes=[];
+    
+    this.solicitudesService.findAllSolicitudes()
+    .subscribe((response: Array<Solicitud>) => {
+    this.solicitudes = response;
+    this.divideSolicitudes();
   });
 
+  }
+  private divideSolicitudes(){
+    this.solicitudesConfirmadas=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == true));
+    this.solicitudesPendientes=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == false));
+    this.solicitudesDeOrganizaciones=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == false && solicitudes.acepta_org == true));
   }
 
 }
