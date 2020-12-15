@@ -11,26 +11,8 @@
   <!-- AQUI TENDRIAS QUE PONER UN SHUFFLE PARA QUE CADA VEZ QUE SE RECARGUE LA PAG SE ORDENEN DE FORMA ALEATORIA LAS ORGANIZACIONES(CARDS) ASI NINGUNA TIENE EL PRIVILEGIO DE TENER SIEMPRE LA PRIMERA POSICION. -->
 
   <div class=" animated fast mt-5">
-    <div class="w-75 mr-auto ml-auto">
-      <app-perfilorgcard></app-perfilorgcard>
-    </div>
-  </div>
-
-  <div class=" animated fast mt-5">
-    <div class="w-75 mr-auto ml-auto">
-      <app-perfilorgcard></app-perfilorgcard>
-    </div>
-  </div>
-
-  <div class=" animated fast mt-5">
-    <div class="w-75 mr-auto ml-auto">
-      <app-perfilorgcard></app-perfilorgcard>
-    </div>
-  </div>
-
-  <div class=" animated fast mt-5">
-    <div class="w-75 mr-auto ml-auto">
-      <app-perfilorgcard></app-perfilorgcard>
+    <div class="w-75 mr-auto ml-auto" *ngFor="let organizacion of organizaciones">
+      <app-perfilorgcard [organizacion]="organizacion"></app-perfilorgcard>
     </div>
   </div>
 

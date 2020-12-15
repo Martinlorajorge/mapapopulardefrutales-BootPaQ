@@ -1,11 +1,13 @@
 
 
-<div *ngIf="arbol!=undefined" class="card">
+<div *ngIf="arbol!=undefined" class="card container">
     <img  src="{{arbol.galeria}}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">{{arbol.nom_especie}}</h5>
-      <p class="card-text">Cantidad: {{solicitud.cantidad}}</p>
-      <p class="card-text">Retiro: {{solicitud.fecha}},  {{solicitud.hora}}</p>
+      <div *ngIf="solicitud.acepta_familia">
+        <p class="card-text" >Cantidad: {{solicitud.cantidad}}</p>
+        <p class="card-text">Retiro: {{solicitud.fecha}},  {{solicitud.hora}}</p>
+      </div>
       <div *ngIf="solicitud.recolector">
         <p class="card-text">Recolector: {{recolector.nomyape}}</p>
         <p class="card-text">DNI: {{recolector.dni}}</p>

@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
             console.log(value);
             this.nombreUsuario=value.email;
             this.password=value.password;
-            this.onLogin();
+            //this.onLogin();
             //this.loginService.login();
             //this.authService.loginByEmail(value);
         }
@@ -71,8 +71,14 @@ export class LoginComponent implements OnInit {
                 this.tokenService.setUserName(data.nombreUsuario);
                 this.tokenService.setAuthorities(data.authorities);
                 this.roles=data.authorities;
-                //preguntar si es familia
-                this.router.navigate(['/mis-arboles']);
+                this.roles.forEach(rol=>{
+                    if(rol ==='ROLE_FAM')
+                        this.router.navigate(['/mis-arboles']);
+                    else if(rol ==='ROLE_ORG')
+                        this.router.navigate(['/homeorganizacion']);
+                        else if(rol==='ROLE_ADMIN')
+                            this.router.navigate(['/organizaciones']);
+                })
             },
             err =>{
                 this.isLogged=false;

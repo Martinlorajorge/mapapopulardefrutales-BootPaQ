@@ -20,6 +20,8 @@ export class MenuService {
         submenu?: Array<any>
     }>) {
         items.forEach((item) => {
+            //dependiento el tipo de usuario lleno el sidebar de opciones
+            
             this.menuItems.push(item);
         });
     }

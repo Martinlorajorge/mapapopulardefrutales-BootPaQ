@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import { Solicitud } from 'src/app/interfaces/solicitud';
 import { SolicitudesService } from 'src/app/services/solicitudes/solicitudes.service';
 import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homeorganizacion',
@@ -14,7 +15,7 @@ export class HomeorganizacionComponent implements OnInit {
   public solicitudesDeFamilias: Array<Solicitud>;
   public solicitudesPendientes: Array<Solicitud>;
   public solicitudes:Array<Solicitud>;
-  constructor(private solicitudesService: SolicitudesService,private acordeonConfig:NgbAccordionConfig) { 
+  constructor(private solicitudesService: SolicitudesService,private acordeonConfig:NgbAccordionConfig, private route:Router) { 
     acordeonConfig.closeOthers=true;
   }
 
@@ -36,5 +37,4 @@ export class HomeorganizacionComponent implements OnInit {
     this.solicitudesDeFamilias=this.solicitudes.filter(solicitudes => (solicitudes.acepta_familia == true && solicitudes.acepta_org == false));
     console.log(this.solicitudesConfirmadas);
   }
-
 }

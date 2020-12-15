@@ -1,19 +1,18 @@
 <div class="card mb-3 border-success " style="max-width: 100%;">
   <div class="row no-gutters">
     <div class="col-md-4 align-self-center">
-      <img src="assets/img/user/11.jpg" class="card-img p-2" alt="...">
+      <img src="{{organizacion.logo}}" class="card-img p-2" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">NOMBRE DE LA ORGANIZACION</h5>
+        <h5 class="card-title">{{organizacion.nombre}}</h5>
         <p class="card-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aspernatur nobis ab deserunt dolorum ducimus
-          qui maxime animi quibusdam ea, esse quas, numquam ut? Cum necessitatibus eos perspiciatis numquam corporis.
+          {{organizacion.descripcion}}
         </p>
         <p class="card-text">
-          Nombre de representante
+          Representante: {{representante.nomyape}}
         </p>
-        <p class="card-text"><small class="text-muted">mail@mail.com.ar</small></p>
+        <p class="card-text"><small class="text-muted">{{organizacion.mail}}</small></p>
       </div>
     </div>
   </div>

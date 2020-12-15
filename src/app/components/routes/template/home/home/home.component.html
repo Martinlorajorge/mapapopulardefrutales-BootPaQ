@@ -11,9 +11,11 @@
     </div>
     <!-- Este pedazo de codigo es el la iteracion que me muestra todos los arboles que traigo de la API -->
     <!-- arbol es el componente que tenes que meterle el css de la card-->
-    <div *ngFor="let arbol of arboles">
+    <div *ngFor="let arbol of arboles" >
       <app-arbol [arbol]="arbol"></app-arbol>
     </div>
+
+    
 
     <a type="remove" href="#/">
       <div class="card b mb-3">
@@ -22,6 +24,10 @@
         </div>
       </div>
     </a>
+
+    
+    
+
 
   </div>
 </div>

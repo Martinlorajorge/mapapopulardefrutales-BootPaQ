@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SolicitudconfirmadaComponent } from '../solicitudconfirmada/solicitudconfirmada/solicitudconfirmada.component';
 import { SolicitudrecoleccionComponent } from '../solicitudrecoleccion/solicitudrecoleccion/solicitudrecoleccion.component';
 import { CardsolicitudModule } from '../components/cardsolicitud/cardsolicitud.module';
+import { SolicitudrecoleccionModule} from '../solicitudrecoleccion/solicitudrecoleccion.module'
 
 
 
@@ -22,7 +23,7 @@ const routes: Routes = [
       path: 'a-confirmar/:id', component: SolicitudconfirmadaComponent
     },
     {
-      path: 'solicitudrecoleccion/id:', component: SolicitudrecoleccionComponent
+      path: 'solicitud-recoleccion/:id', component: SolicitudrecoleccionComponent
     }
   ]
   },
@@ -38,6 +39,7 @@ const routes: Routes = [
         MaterialModule,
         CommonModule,
         NgbModule,
+        SolicitudrecoleccionModule,
         RouterModule.forChild(routes)
     ],
     declarations: [

@@ -12,7 +12,7 @@
     <h3 class="btn-outline-success container-fluid text-center btn-block mb-3  p-3 rounded-left rounded-right">
       Confirmadas</h3>
 
-    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesConfirmadas">
+    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesConfirmadas" [routerLink]="['/mis-solicitudes/confirmada/',solicitud.id]">
       <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
     </div>
 
@@ -20,7 +20,7 @@
       Solicitudes de
       Organizaciones</h3>
 
-    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesDeOrganizaciones">
+    <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesDeOrganizaciones" [routerLink]="['/mis-solicitudes/de-organizacion/',solicitud.id]">
       <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
     </div>
 
@@ -33,7 +33,7 @@
 
   </div>
 
-  <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesPendientes">
+  <div class="animated fast fadeIn puntero" *ngFor="let solicitud of solicitudesPendientes" [routerLink]="['/mis-solicitudes/a-confirmar/',solicitud.id]">
     <app-cardsolicitud [solicitud]="solicitud"></app-cardsolicitud>
   </div>
 

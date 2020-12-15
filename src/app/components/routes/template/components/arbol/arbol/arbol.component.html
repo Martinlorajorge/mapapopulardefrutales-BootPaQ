@@ -1,21 +1,107 @@
 <!-- para llamar a un dato del objeto es {{arbol.(propiedad que quiera llamar)}} -->
 <!-- inserta el css del card tuyo aca -->
 <div class="card">
-  <img src="{{arbol.galeria}}" class="card-img-top" alt="...">
+  <img src="{{arbol.galeria}}" class="card-img-top" alt="..." data-toggle="modal" data-target="#modalArbol">
   <div class="card-body">
     <h5 class="card-title">{{arbol.nom_especie}}</h5>
-    <p class="card-text">{{arbol.direccion}}</p>
+    <p class="card-text">Dirección: {{arbol.direccion}}</p>
 
     <div class="">
       <label class="mda-checkbox">
         <input type="checkbox" checked="" />
-        <em class="bg-green-500"></em>Hacer Publico...</label>
+        <em class="bg-green-500"></em>Hacer Árbol público.</label>
     </div>
 
     <div class="container">
-      <a class="btn btn-success btn-block text-white" (click)="nuevaSolicitud()">Solicitud
-        de Donación</a>
+      <a class="btn btn-success btn-block text-white" (click)="nuevaSolicitud()">Realizar una Donación</a>
     </div>
   </div>
 
 </div>
+<!-- MODAL ELIMINAR ARBOL-->
+    <div class="container">
+      <div class="modal fade" tabindex="-1" id="modalArbol">
+          <div class="modal-dialog modal-sm">
+              <div class="modal-content ">
+                
+                  <div class="modal-header">
+                    <h3>{{arbol.nom_especie}}</h3>
+
+                      <button class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <div class="modal-body">
+
+                    <div class="card m-0">
+                      <div class="card-header">
+                        <h6 class="card-text">Dirección: {{arbol.direccion}}</h6>
+
+                      </div>
+                      <div class="card-body">
+                        <agm-map [latitude]="arbol.lat" [longitude]="arbol.lng" [zoom]="15" [scrollwheel]="scrollwheel" class="gmap"
+                      [fullscreenControl]="true">
+                        <agm-marker [latitude]="arbol.lat" [longitude]="arbol.lng">
+                        </agm-marker>
+                      </agm-map>
+
+                      <div class="container mt-3">
+                        <a class="btn  btn-danger btn-block text-white" data-toggle="modal" data-target="#modalEliminar">Eliminar Árbol</a>
+                      </div>
+                      </div>
+                    </div>
+                      <!-- MODAL ACEPTAR ELIMINAR -->
+                      <div class="container ">
+                        <div class="modal fade" tabindex="-1" id="modalEliminar">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                  
+
+                                    <div class="modal-body">
+                                      <h6 class="card-text">¿Está seguro que desea eliminar al {{arbol.nom_especie}} de su jardín?</h6>
+                                      <!-- <a class="btn  btn-danger btn-block text-white"  >Eliminar Árbol</a> -->
+
+
+                                      <div class="row animated fadeIn">
+
+                                        <div class="col-6">
+                                          <div class="text-center mt-3 mb-3">
+                                            <a  class="btn btn-warning btn-xs py-2 px-4 text-white" data-dismiss="modal">Cancelar</a>
+                                          </div>
+                                    
+                                        </div>
+                                    
+                                    
+                                        <div class="col-6">
+                                          <div class="text-center mt-3 mb-3">
+                                            <a class="btn btn-danger btn-xs py-2 px-4 text-white" (click)="eliminarArbol()">Eliminar Árbol</a>
+                                          </div>
+                                        </div>
+                                    
+                                      </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                      </div>
+                      <!-- END MODAL ACEPTAR ELIMINAR -->
+                    
+
+
+
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+     
+
+  </div>
+  <!-- End of modal -->
+
+  

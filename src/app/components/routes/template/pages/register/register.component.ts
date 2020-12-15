@@ -12,6 +12,10 @@ import { UserI } from 'src/app/interfaces/user-i';
 import { Organizacion } from 'src/app/interfaces/organizacion';
 import { Representante } from 'src/app/interfaces/representante';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { TokenService } from 'src/app/services/token/token.service';
+import { NuevoUsuario } from 'src/app/models/nuevo-usuario/nuevo-usuario';
+import { LoginUsuario } from 'src/app/models/login-usuario/login-usuario';
 
 @Component({
     selector: 'app-register',
@@ -19,6 +23,18 @@ import { Router } from '@angular/router';
     styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
+    isLogged=false;
+    isRegisted=false;
+    isRegistedFail=false;
+    isLoginFail=false;
+    nuevoUsuario: NuevoUsuario;
+    email:string;
+    // nombreUsuario:string;
+    password:string;
+    errorMessage:string;
+
+    roles:string[]=[];
 
     public tiposOrganizacion:Array<TipoOrganizacion>;
     public tipoInicial: string;
@@ -33,7 +49,7 @@ export class RegisterComponent implements OnInit {
     // organizacionForm:FormGroup;
     isFamilia: boolean;
 
-    constructor(public settings: SettingsService, fb: FormBuilder, private registerService: RegisterService, private tipoOrgService:TipoOrganizacionService, private router:Router) {
+    constructor(public settings: SettingsService, fb: FormBuilder, private registerService: RegisterService, private tipoOrgService:TipoOrganizacionService, private authService:AuthService, private tokenService:TokenService,private router:Router) {
 
         let password = new FormControl('', Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z0-9]{6,10}$')]));
         let certainPassword = new FormControl('', [Validators.required, CustomValidators.equalTo(password)]);
@@ -97,14 +113,15 @@ export class RegisterComponent implements OnInit {
                     nro_contacto:value.telefonoFamilia
 
                 };
-                let nuevoUsuario:UserI={
-                    usuario:value.email,
-                    clave:value.passwordGroup.password,
-                    tipo:3
-                };
-                let respuesta= this.registerService.registrarFamilia(nuevaFamilia,nuevoUsuario);
+                // let nuevoUsuario:UserI={
+                //     usuario:value.email,
+                //     clave:value.passwordGroup.password,
+                //     tipo:3
+                // };
+                let respuesta = this.registerService.registrarFamilia(nuevaFamilia);
                 console.log(respuesta);
-                this.router.navigate(['/mis-arboles']);
+                //this.onRegister('ROLE_FAM');
+                // this.router.navigate(['/mis-arboles']);
 
             }
             else if(!this.isFamilia){
@@ -112,22 +129,29 @@ export class RegisterComponent implements OnInit {
                     mail:value.email,
                     nombre:value.nombreOrganizacion,
                     nro_contacto:value.telefonoOrganizacion,
+                    representante: value.dni,
                     tipo:value.tipoOrganizacion
+
                 };
                 let nuevoRepresentante:Representante={
                     nomyape:value.nombreRepresentante,
                     dni: value.dni,
                     direccion: value.email,
                     nro_contacto: value.telefonoOrganizacion,
+                    //idorganizacion:nuevaOrganizacion//
                 };
-                let nuevoUsuario:UserI={
-                    usuario:value.email,
-                    clave:value.passwordGroup.password,
-                    tipo:2
-                };
-                let respuesta= this.registerService.registrarOrganizacion(nuevaOrganizacion,nuevoUsuario,nuevoRepresentante);
+                // let nuevoUsuario:UserI={
+                //     usuario:value.email,
+                //     clave:value.passwordGroup.password,
+                //     tipo:2
+                // };
+                console.log(nuevaOrganizacion);
+                console.log(nuevoRepresentante);
+
+                let respuesta= this.registerService.registrarOrganizacion(nuevaOrganizacion,nuevoRepresentante);
                 console.log(respuesta);
-                this.router.navigate(['/homeorganizacion']);
+                //this.onRegister('ROLE_ORG');
+                // this.router.navigate(['/homeorganizacion']);
 
                 //this.registerService.registrarOrganizacion(value);
             }
@@ -148,6 +172,56 @@ export class RegisterComponent implements OnInit {
         this.tiposOrganizacion = response;
         this.tipoInicial= this.tiposOrganizacion[0].nom;
         });
+
+        if(this.tokenService.getToken()){
+            this.isLogged=true;
+        }
+    }
+
+    onRegister(authority:string){
+        this.nuevoUsuario=new NuevoUsuario(this.email,this.password,[authority]);
+
+        this.authService.nuevoUsuario(this.nuevoUsuario).subscribe(
+            data=> {
+                this.isRegisted=true;
+                this.isRegistedFail=false;
+
+                let loginUsuario =new LoginUsuario(this.nuevoUsuario.email,this.nuevoUsuario.password);
+                this.authService.login(loginUsuario).subscribe(
+            data=> {
+                this.isLogged=true;
+                this.isLoginFail=false;
+
+                this.tokenService.setToken(data.token);
+                this.tokenService.setUserName(data.nombreUsuario);
+                this.tokenService.setAuthorities(data.authorities);
+                this.roles=data.authorities;
+                this.roles.forEach(rol=>{
+                    if(rol ==='ROLE_FAM')
+                        this.router.navigate(['/mis-arboles']);
+                    else if(rol ==='ROLE_ORG')
+                        this.router.navigate(['/homeorganizacion']);
+                        else if(rol==='ROLE_ADMIN')
+                            this.router.navigate(['/organizaciones']);
+                })
+            },
+            err =>{
+                this.isLogged=false;
+                this.isLoginFail=true;
+                this.errorMessage=err.error.message;
+                console.log(this.errorMessage);
+            }
+
+        );
+            },
+            err =>{
+                this.isRegisted=false;
+                this.isRegistedFail=true;
+                this.errorMessage=err.error.message;
+                console.log(this.errorMessage);
+            }
+
+        )
     }
 
 }
