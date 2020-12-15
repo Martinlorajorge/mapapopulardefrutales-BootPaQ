@@ -9,9 +9,14 @@
   <div class="container animated fast">
 
 
-    <app-card-detalle-solicitud *ngIf="solicitud!=undefined" [solicitud]="solicitud"></app-card-detalle-solicitud>
 
+    <div class="row">
+      <div class="col-11 col-sm-12 col-md-8	col-lg-6	col-xl-6 ml-auto mr-auto mt-5">
 
+        <app-card-detalle-solicitud *ngIf="solicitud!=undefined" [solicitud]="solicitud"></app-card-detalle-solicitud>
+
+      </div>
+    </div>
     <!-- <app-cardrecolector ></app-cardrecolector> -->
 
 
