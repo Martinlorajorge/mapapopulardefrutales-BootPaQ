@@ -5,28 +5,28 @@
     <div (click)="irNuevoArbol() " class="card b mb-3 puntero">
       <a type="">
         <div class="card-header">
-          <h3 class="mt-3 text-center text-green">AGREGAR <br> ÁRBOL</h3>
+          <h4 class="mt-3 text-center text-green">AGREGAR ÁRBOL</h4>
         </div>
       </a>
     </div>
-    <!-- Este pedazo de codigo es el la iteracion que me muestra todos los arboles que traigo de la API -->
-    <!-- arbol es el componente que tenes que meterle el css de la card-->
-    <div *ngFor="let arbol of arboles" >
-      <app-arbol [arbol]="arbol"></app-arbol>
-    </div>
-
-    
 
     <a type="remove" href="#/">
       <div class="card b mb-3">
         <div class="card-header">
-          <h3 class="mt-3 text-danger text-center">QUITAR <br> ÁRBOL.</h3>
+          <h4 class="mt-3 text-danger text-center">QUITAR ÁRBOL.</h4>
         </div>
       </div>
     </a>
 
-    
-    
+
+
+    <!-- Este pedazo de codigo es el la iteracion que me muestra todos los arboles que traigo de la API -->
+    <!-- arbol es el componente que tenes que meterle el css de la card-->
+    <div *ngFor="let arbol of arboles">
+      <app-arbol [arbol]="arbol"></app-arbol>
+    </div>
+
+
 
 
   </div>

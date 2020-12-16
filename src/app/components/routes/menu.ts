@@ -270,10 +270,10 @@ const Pages = {
              text: 'Register',
              link: '/register'
          },
-//         {
-//             text: 'Recover',
-//             link: '/recover'
-//         },
+         {
+             text: 'Bienvenida',
+             link: '/bienvenida'
+         },
 //         {
 //             text: 'Lock',
 //             link: '/lock'

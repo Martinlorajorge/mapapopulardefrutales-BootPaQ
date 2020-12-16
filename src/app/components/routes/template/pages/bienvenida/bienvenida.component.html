@@ -1,0 +1,79 @@
+<div class="container animate fast fadeIn">
+
+  <div class="row mt-5 mb-0 animate fast">
+    <div class="col-3 ml-auto mr-auto">
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+        <img src="assets/img/Logobienvenida.png" style="width: 100%;">
+      </a>
+    </div>
+  </div>
+
+  <div class="row mt-0 animate fast">
+    <div class="col-4 ml-auto mr-auto">
+      <img src="assets/img/Nombrefremapp.png" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="row mt-2 animate fast">
+    <div class="col-8 mr-auto ml-auto">
+      <h5 class="text-center">¡Bienvenido a Frumappa! La webapp que llena el corazon de los que mas necesitan.</h5>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+  <div class="row mt-5">
+    <div class="col-6 mr-auto ml-auto">
+      <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">
+        ¿Quienes somos?</button>
+    </div>
+  </div>
+
+
+
+  <div class="row  mt-5 animate fast">
+    <div class="col-6 ml-auto mr-auto">
+      <a class="btn btn-primary btn-block" [routerLink]="['/register']"
+        routerLinkActive="router-link-active">Registrarme</a>
+    </div>
+  </div>
+
+  <div class="row  mt-5 mb-5 animate fast">
+    <div class="col-6 ml-auto mr-auto mb-5">
+      <a class="btn btn-primary btn-block" [routerLink]="['/login']" routerLinkActive="router-link-active">Iniciar
+        Sesión</a>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">frumappa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Frumappa es una herramienta que facilita el contacto entre familias que tengan frutales en sus hogares y
+        quieran
+        donar parte de lo que generen a organizaciones que luego destinarán estas donaciones a sectores que necesiten
+        de
+        estos alimentos.
+
+        ¡Es muy fácil! Solo tienes que registrarte, registrar tus árboles y contactar a alguna organización ya
+        registrada para que retire lo que quieres donar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

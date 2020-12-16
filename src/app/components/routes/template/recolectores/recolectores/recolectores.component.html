@@ -9,7 +9,7 @@
 
 
   <div class="col-10 ml-auto mr-auto my-3" (click)="nuevoRecolector()">
-    <a class="btn btn-outline-success btn-block">Agregar Recolector</a>
+    <a class="btn btn-success btn-block text-white">Agregar Recolector</a>
   </div>
 
 
@@ -17,8 +17,8 @@
   <div class="col-10 mr-auto ml-auto">
 
 
-    <a class="btn btn-block bg-white border-success" *ngFor="let recolector of recolectores" [routerLink]="['/recolectores/detallerecolector',recolector.dni]"
-      routerLinkActive="router-link-active">
+    <a class="btn btn-block bg-white border-success" *ngFor="let recolector of recolectores"
+      [routerLink]="['/recolectores/detallerecolector',recolector.dni]" routerLinkActive="router-link-active">
 
       <app-cardrecolector [recolector]="recolector"></app-cardrecolector>
 

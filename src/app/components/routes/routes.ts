@@ -9,6 +9,7 @@ import { MaintenanceComponent } from './template/pages/maintenance/maintenance.c
 import { Error404Component } from './template/pages/error404/error404.component';
 import { Error500Component } from './template/pages/error500/error500.component';
 import { OrganizacionesModule } from './template/organizaciones/organizaciones.module';
+import { BienvenidaComponent } from './template/pages/bienvenida/bienvenida.component';
 
 
 export const routes: Routes = [
@@ -62,6 +63,8 @@ export const routes: Routes = [
     { path: 'maintenance', component: MaintenanceComponent },
     { path: '404', component: Error404Component },
     { path: '500', component: Error500Component },
+    { path: 'bienvenida', component: BienvenidaComponent },
+
 
     // Not found
     { path: '**', redirectTo: 'mis-arboles' }
