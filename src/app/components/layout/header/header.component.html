@@ -60,28 +60,49 @@
     <!-- START Alert menu-->
     <li class="nav-item dropdown dropdown-list" dropdown>
       <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" dropdownToggle>
-        <em class="icon-bell"></em>
-        <span class="badge badge-danger">99</span>
+        <em class="icon-bell fa fa-2x"></em>
+        <span class="badge badge-danger">6</span>
       </a>
       <!-- START Dropdown menu-->
       <div *dropdownMenu class="dropdown-menu dropdown-menu-right animated flipInX">
-        <div class="dropdown-item">
+        <div class="dropdown-item pr-5 ml-2">
           <!-- START list group-->
-          <div class="list-group">
-            <!-- list item-->
-            <!-- <div class="list-group-item list-group-item-action">
-              <div class="media">
-                <div class="align-self-start mr-2">
-                  <em class="fab fa-twitter fa-2x text-info"></em>
-                </div>
-                <div class="media-body">
-                  <p class="m-0">Nuevos seguidores</p>
-                  <p class="m-0 text-muted text-sm">1 nuevo seguidor</p>
-                </div>
-              </div>
-            </div> -->
+          <div class="list-group ">
             <!-- list item-->
             <div class="list-group-item list-group-item-action">
+
+              <!-- NOTIFICACIONES FAMILIA -->
+
+              <app-notificacion-familia></app-notificacion-familia>
+
+
+              <!-- NOTIFICACION ORGANIZACION -->
+
+              <app-notificacion-organizacion></app-notificacion-organizacion>
+
+            </div>
+            <!-- list item-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="list-group-item list-group-item-action">
               <div class="media">
                 <div class="align-self-start mr-2">
                   <em class="fa fa-envelope fa-2x text-warning"></em>
@@ -91,9 +112,9 @@
                   <p class="m-0 text-muted text-sm">Tienes 10 nuevos mensajes</p>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- list item-->
-            <div class="list-group-item list-group-item-action">
+            <!-- <div class="list-group-item list-group-item-action">
               <div class="media">
                 <div class="align-self-start mr-2">
                   <em class="fa fa-tasks fa-2x text-success"></em>
@@ -103,14 +124,14 @@
                   <p class="m-0 text-muted text-sm">11 tareas pendientes</p>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- last list item-->
-            <div class="list-group-item list-group-item-action">
+            <!-- <div class="list-group-item list-group-item-action">
               <span class="d-flex align-items-center">
                 <span class="text-sm">More notifications</span>
-                <span class="badge badge-danger ml-auto">15</span>
+                <span class="badge badge-danger ml-auto">98</span>
               </span>
-            </div>
+            </div> -->
           </div>
           <!-- END list group-->
         </div>
@@ -121,7 +142,7 @@
     <!-- START Offsidebar button-->
     <li class="nav-item">
       <a class="nav-link" (click)="toggleOffsidebar(); $event.stopPropagation()">
-        <em class="icon-notebook"></em>
+        <em class="icon-notebook fa fa-2x"></em>
       </a>
     </li>
     <!-- END Offsidebar menu-->

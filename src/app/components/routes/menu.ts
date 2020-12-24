@@ -59,47 +59,47 @@ const PerfilorganizacionModule = {
 //     icon: 'icon-grid'
 // };
 
-// const Material = {
-//     text: "Material",
-//     link: "/material",
-//     icon: "fa fa-shield-alt",
-//     submenu: [
-//         {
-//             text: "Widgets",
-//             link: "/material/widgets"
-//         },
-//         {
-//             text: "Cards",
-//             link: "/material/cards"
-//         },
-//         {
-//             text: "Forms",
-//             link: "/material/forms"
-//         },
-//         {
-//             text: "Inputs",
-//             link: "/material/inputs"
-//         },
-//         {
-//             text: "Lists",
-//             link: "/material/lists"
-//         },
-//         {
-//             text: "Whiteframe",
-//             link: "/material/whiteframe"
-//         },
-//         {
-//             text: "Colors",
-//             link: "/material/colors"
-//         },
-//         {
-//             text: "ng2Material",
-//             link: "/material/ngmaterial"
-//         }
-//     ],
-//     "alert": "new",
-//     "label": "badge badge-primary"
-// };
+//  const Material = {
+//      text: "Material",
+//      link: "/material",
+//      icon: "fa fa-shield-alt",
+//      submenu: [
+//          {
+//              text: "Widgets",
+//              link: "/material/widgets"
+//          },
+//          {
+//              text: "Cards",
+//              link: "/material/cards"
+//          },
+//          {
+//              text: "Forms",
+//              link: "/material/forms"
+//          },
+//          {
+//              text: "Inputs",
+//              link: "/material/inputs"
+//          },
+//          {
+//              text: "Lists",
+//              link: "/material/lists"
+//          },
+//          {
+//              text: "Whiteframe",
+//              link: "/material/whiteframe"
+//          },
+//          {
+//              text: "Colors",
+//              link: "/material/colors"
+//          },
+//          {
+//              text: "ng2Material",
+//              link: "/material/ngmaterial"
+//          }
+//      ],
+//      "alert": "new",
+//      "label": "badge badge-primary"
+//  };
 
 // const Elements = {
 //     text: 'Elements',
@@ -531,7 +531,7 @@ export const menu = [
     MapaarbolesModule,
     MicuentaorganizacionModule,
     RecolectoresModule,
-    // Material,
+    //  Material,
     // Elements,
     // Forms,
     // Charts,

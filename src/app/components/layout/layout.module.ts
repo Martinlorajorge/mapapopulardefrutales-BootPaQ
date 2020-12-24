@@ -10,6 +10,8 @@ import { UserblockService } from './sidebar/userblock/userblock.service';
 import { FooterComponent } from './footer/footer.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { NotificacionFamiliaComponent } from './notificacion-familia/notificacion-familia.component';
+import { NotificacionOrganizacionComponent } from './notificacion-organizacion/notificacion-organizacion.component';
 
 @NgModule({
     imports: [
@@ -25,7 +27,9 @@ import { SharedModule } from '../shared/shared.module';
         HeaderComponent,
         NavsearchComponent,
         OffsidebarComponent,
-        FooterComponent
+        FooterComponent,
+        NotificacionFamiliaComponent,
+        NotificacionOrganizacionComponent
     ],
     exports: [
         LayoutComponent,
